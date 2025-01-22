@@ -60,6 +60,7 @@ const RussianPhoneField = () => {
     >
       <form
         style={{
+          width: "100%",
           display: "flex",
           alignItems: "center",
         }}
@@ -83,7 +84,7 @@ const RussianPhoneField = () => {
               borderColor: "white", // Set border color to white
               backgroundColor: "white",
               height: { lg: 50, md: 50, sm: 45, xs: 45 },
-
+              width: "95%",
               "&:hover fieldset": {
                 borderColor: "white", // Border color on hover
               },

@@ -54,14 +54,14 @@ const Footer = () => {
           spacing={{ lg: 5, xs: 0 }}
           width={{ lg: "100%", md: "100%", sm: "100%", xs: "100%" }}
           // justifyContent={}
-          // mt={2}
+          mt={2}
           justifyContent="space-between"
         >
           <Stack
             spacing={{ lg: 3, sm: 2, md: 2.5, xs: 2 }}
             width={{ lg: "100%", md: "72%", sm: "82%", xs: "100%" }}
           >
-            <Stack
+            {/* <Stack
               maxWidth="88%"
               sx={{
                 display: { lg: "none", md: "none", sm: "flex", xs: "flex" },
@@ -78,11 +78,7 @@ const Footer = () => {
                   fontFamily: "Impact",
                 }}
               >
-                {/* <img
-                      src="/images/ReModel.jpg"
-                      style={{ width: "100%", height: "100%", pt: 5 }}
-                      alt="LOGO"
-                    /> */}
+             
                 <Typography
                   color="#0D99FF"
                   fontFamily="Impact"
@@ -113,21 +109,23 @@ const Footer = () => {
               >
                 УСЛУГИ САНТЕХНИКА В САНКТ - ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ{" "}
               </Typography>
-            </Stack>
+            </Stack> */}
 
             <Stack
+              // direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
               direction="row"
+              flexWrap="wrap"
               alignItems="start"
-              sx={{
-                display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
-              }}
+              // sx={{
+              //   display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
+              // }}
               width="100%"
               justifyContent="space-between"
             >
               <Stack
                 // width={{ lg: 70, md: 80, sm: 70, xs: 55 }}
                 // height={{ lg: 80, md: 75, sm: 70, xs: 55 }}
-                maxWidth="48%"
+                maxWidth={{ lg: "48%", md: "48%", sm: "48%", xs: "95%" }}
               >
                 <a
                   href="/"
@@ -171,7 +169,7 @@ const Footer = () => {
                     fontWeight={300}
                     fontSize={14}
                     color="#fff"
-                    width="60%"
+                    width={{ lg: "60%", md: "60%", sm: "60%", xs: "90%" }}
                     lineHeight="17px"
                     textTransform="uppercase"
                   >
@@ -183,8 +181,9 @@ const Footer = () => {
                     fontWeight={400}
                     fontSize={18}
                     color="#fff"
-                    mt={5}
-                    width="57%"
+                    mt={{ lg: 5, xs: 2 }}
+                    // width="57%"
+                    width={{ lg: "60%", md: "60%", sm: "60%", xs: "90%" }}
                     lineHeight="27px"
                   >
                     © САНТЕХНИК И ЭЛЕКТРИК 2025, Все права защищены
@@ -192,7 +191,12 @@ const Footer = () => {
                 </Stack>
               </Stack>
 
-              <Stack direction="column" width="27%">
+              <Stack
+                direction="column"
+                // width="27%"
+                width={{ lg: "22%", md: "27%", sm: "50%", xs: "90%" }}
+                mt={{ lg: 0, xs: 2 }}
+              >
                 <a
                   style={{
                     fontWeight: 400,
@@ -219,7 +223,7 @@ const Footer = () => {
                 >
                   Заказать обратный звонок
                 </span>
-                <Stack mt={5} spacing={1}>
+                <Stack mt={{ lg: 5, xs: 3 }} mb={{ lg: 0, xs: 5 }} spacing={1}>
                   {/* <a href="mailto:support@example.com?subject=Support Request&body=Dear Support,&tag=support_ticket">Submit a Support Ticket</a> */}
                   <a
                     href="mailto:santehnikelektrik.pro@gmail.com"

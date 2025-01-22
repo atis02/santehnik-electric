@@ -7,62 +7,62 @@ const index = () => {
     {
       title: "Устранение засоров",
       img: "/images/image 30.png",
-      price: "от 750 руб",
+      price: "от 1100",
     },
     {
       title: "Монтаж и замена сантехнических труб",
       img: "/images/image 30-1.png",
-      price: "от 540 руб",
+      price: "от 2000 руб",
     },
     {
       title: "Установка и ремонт унитаза",
       img: "/images/image 30-2.png",
-      price: "от 990 руб",
+      price: "от 3000 руб",
     },
     {
       title: "установка и замена смесителя",
       img: "/images/image 30-3.png",
-      price: "от 950 руб",
+      price: "от 1700 руб",
     },
     {
       title: "Замена стояков",
       img: "/images/image 30-4.png",
-      price: "от 1200 руб",
+      price: "от 4000 руб",
     },
     {
       title: "Замена труб канализации",
       img: "/images/image 30-5.png",
-      price: "от 1490 руб",
+      price: "от 1900- руб",
     },
     {
       title: "Устранение короткого замыкания",
       img: "/images/image 30-6.png",
-      price: "от 1850 руб",
+      price: "от 1100 руб",
     },
     {
       title: "Ремонт освещения",
       img: "/images/image 30-7.png",
-      price: "от 350 руб",
+      price: "от 600 руб",
     },
     {
-      title: "Демонтаж душевой кабины",
+      title: "Демонтаж душевой кабины (без сохранения)",
       img: "/images/image 30-8.png",
-      price: "от 1500 руб",
+      price: "от 2000 руб",
     },
     {
       title: "Установка патрона открытого",
       img: "/images/image 30-9.png",
-      price: "от 950 руб",
+      price: "от 500 руб",
     },
     {
-      title: "Штробление/сверление/бурение",
+      title: "Штробление стен под трубы водоснабжения(газоблок) м. п ",
       img: "/images/image 30-10.png",
-      price: "от 990 руб",
+      price: "от 1200 руб",
     },
     {
-      title: "Электроплитыварочные панелидуховые шкафы",
-      img: "/images/image 30-11.png",
-      price: "от 1850 руб",
+      title: "Демонтаж водонагревателя ",
+      img: "/images/demontaz.jpg",
+      price: "от 1200 руб",
     },
   ];
   return (
