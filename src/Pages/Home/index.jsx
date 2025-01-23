@@ -138,14 +138,13 @@ const Home = () => {
             </Typography>
           </Stack>
           <Toaster />
-          <Button
-            // href="https://wa.me/+79119833108?text=Добрый%20день,%20меня%20заинтересовало%20обучение%20в%20Арт-Агентстве"
-            target="_blank"
+          <a
+            href="tel:8 (800) 234-12-82"
             className="button"
             data-aos="fade-up"
             data-aos-once="true"
             data-aos-delay="800"
-            onClick={() => setOpen(true)}
+            // onClick={() => setOpen(true)}
           >
             <span className="button-background"></span>
             <span className="button-text">
@@ -153,7 +152,7 @@ const Home = () => {
               Вызвать мастера
               {/* <EastIcon /> */}
             </span>
-          </Button>
+          </a>
         </Stack>
         <Stack
           width={{ lg: "80%", md: "100%", sm: "100%", xs: "60%" }}

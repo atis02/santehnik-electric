@@ -336,9 +336,9 @@ const Navbar = () => {
                 lineHeight: "28px",
                 textDecoration: "none",
               }}
-              href="tel:+99363885234"
+              href="tel:8 (800) 234-12-82"
             >
-              +8 (800) 234-12-82
+              8 (800) 234-12-82
             </a>
             <span
               style={{

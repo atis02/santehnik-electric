@@ -216,12 +216,12 @@ const Footer = () => {
                     lineHeight: "48px",
                     textDecoration: "none",
                   }}
-                  href="tel:+99363885234"
+                  href="tel:8 (800) 234-12-82"
                 >
-                  +8 (800) 234-12-82
+                  8 (800) 234-12-82
                 </a>
                 <a
-                  href="tel:+99363885234"
+                  href="tel:8 (800) 234-12-82"
                   style={{
                     color: "#0D92F3",
                     textDecoration: "underline",
