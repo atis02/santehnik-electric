@@ -41,6 +41,7 @@ const Home = () => {
         "Сантехники и Электрики сертифицированные с опытом работы более 10 лет",
     },
     { title: "Гарантия на выполненные работы" },
+    // { title: "Мы работаем с 09:00-22:00" },
   ];
 
   return (
@@ -222,26 +223,54 @@ const Home = () => {
             </Typography>
           </Stack>
           <Stack
-            border="2px solid #0D99FF"
             direction="row"
+            justifyContent="space-between"
             alignItems="center"
-            spacing={1}
-            maxHeight={80}
-            width="70%"
-            p="20px"
-            boxShadow="0px 0px 10px 0px #0D99FF"
-            data-aos="fade-up"
-            data-aos-delay="300"
-            data-aos-once="true"
           >
-            <img
-              src="/images/image 10.png"
-              style={{ width: 40, height: 40 }}
-              alt=""
-            />
-            <Typography color="#0D99FF" fontSize={18} fontWeight={600}>
-              Низкие цены - найдете дешевле? Договоримся!
-            </Typography>
+            <Stack
+              border="2px solid #0D99FF"
+              direction="row"
+              alignItems="center"
+              spacing={1}
+              maxHeight={80}
+              width="65%"
+              p="20px"
+              boxShadow="0px 0px 10px 0px #0D99FF"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-once="true"
+            >
+              <img
+                src="/images/image 10.png"
+                style={{ width: 40, height: 40 }}
+                alt=""
+              />
+              <Typography color="#0D99FF" fontSize={18} fontWeight={600}>
+                Низкие цены - найдете дешевле? Договоримся!
+              </Typography>
+            </Stack>
+            <Stack
+              border="2px solid #0D99FF"
+              direction="row"
+              alignItems="center"
+              spacing={1}
+              maxHeight={80}
+              width="30%"
+              p="20px"
+              boxShadow="0px 0px 10px 0px #0D99FF"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-once="true"
+            >
+              <img
+                src="/images/working-time.svg"
+                style={{ width: 40, height: 60 }}
+                alt=""
+              />
+              <Typography color="#0D99FF" fontSize={14} fontWeight={600}>
+                Мы работаем с 09:00-22:00
+              </Typography>
+            </Stack>
           </Stack>
         </Stack>
       </Stack>
@@ -269,6 +298,7 @@ const Home = () => {
         >
           {dataMainPage.map((elem) => (
             <Stack
+              key={elem.title}
               direction="row"
               alignItems="center"
               spacing={{ lg: 3, md: 3, sm: 3, xs: 1 }}

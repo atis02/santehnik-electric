@@ -33,7 +33,7 @@ function App() {
     setLoader(true);
     setTimeout(() => {
       setLoader(false);
-    }, 500);
+    }, 1500);
   }, []);
 
   useEffect(() => {

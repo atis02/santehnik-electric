@@ -43,6 +43,7 @@ const Models = () => {
         { price: "1500р", title: "Установка счётчика электроэнергии от " },
         { price: "700р", title: "Установка телевизора от " },
       ],
+      pdfUrl: "/Электрика.pdf",
     },
     {
       mainTitle: "Стоимость услуги Сантехника от:",
@@ -62,6 +63,7 @@ const Models = () => {
         { price: "900p", title: "Канализация от " },
         { price: "900p", title: "Трубопровод ГВС, ХВС от " },
       ],
+      pdfUrl: "/Сантехника.pdf",
     },
   ];
   const theme = useTheme();
@@ -138,9 +140,12 @@ const Models = () => {
               style={{
                 paddingBottom: "20px",
                 width: isMobile ? "90%" : "50%",
-                height: isMobile ? "520px" : "650px",
+                height: isMobile ? "540px" : "660px",
                 backgroundColor: "#292929",
                 padding: isMobile ? 10 : 34,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               <Stack
@@ -149,7 +154,8 @@ const Models = () => {
                 justifyContent="space-between"
                 spacing={{ lg: 6, md: 4, xs: 3 }}
                 // pl={2}
-                mb={3}
+                mb={2}
+                mt={2}
                 width="100%"
               >
                 <Stack
@@ -180,7 +186,7 @@ const Models = () => {
                         key={elem.title}
                         direction="row"
                         justifyContent="space-between"
-                        alignItems="center"
+                        alignItems="start"
                         width="90%"
                         spacing={2}
                       >
@@ -188,7 +194,7 @@ const Models = () => {
                           fontFamily="Montserrat"
                           fontSize={{ lg: 14, md: 14, sm: 13, xs: 12 }}
                           fontWeight={500}
-                          textAlign="start"
+                          textAlign="justify"
                         >
                           {elem.title}
                         </Typography>
@@ -204,11 +210,26 @@ const Models = () => {
                           fontWeight={600}
                           color="#fff"
                           textAlign="start"
+                          minWidth="20%"
                         >
-                          {elem.price}
+                          от {elem.price}
                         </Typography>
                       </Stack>
                     ))}
+                    <Stack direction="row" alignItems="center">
+                      <a
+                        href={item.pdfUrl}
+                        style={{ color: "#fff", fontFamily: "Montserrat" }}
+                        download="CustomFileName.pdf"
+                      >
+                        Скачать прайс-лист
+                      </a>
+                      <img
+                        src="/images/pdfIcon.png"
+                        style={{ width: 24, height: 24 }}
+                        alt=""
+                      />
+                    </Stack>
                   </Stack>
                 </Stack>
               </Stack>
@@ -226,7 +247,7 @@ const Models = () => {
         padding={isMobile ? 2 : 0}
       >
         <Stack gap="40px">
-          <Stack direction="row" alignItems="center">
+          {/* <Stack direction="row" alignItems="center">
             <a
               href="/Электрика.pdf"
               style={{ color: "#fff", fontFamily: "Montserrat" }}
@@ -239,7 +260,7 @@ const Models = () => {
               style={{ width: 24, height: 24 }}
               alt=""
             />
-          </Stack>
+          </Stack> */}
           <Typography color="#fff" fontFamily="Montserrat" fontSize={16}>
             В случае отказа от рaбот клиент оплачивает выезд мастера - 900P
           </Typography>

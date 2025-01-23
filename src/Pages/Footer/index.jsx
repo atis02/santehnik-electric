@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Container, Divider, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Divider,
+  Stack,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import Aos from "aos";
 import { useTranslation } from "react-i18next";
 
@@ -9,6 +17,8 @@ const Footer = () => {
     offset: 0,
   });
   const { t } = useTranslation();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <>
       <Box
@@ -134,7 +144,7 @@ const Footer = () => {
                     display: "flex",
                     alignItems: "center",
                     gap: 2,
-                    fontSize: 34,
+                    fontSize: isMobile ? 30 : 34,
                     fontFamily: "Impact",
                   }}
                 >
@@ -146,7 +156,7 @@ const Footer = () => {
                   <Typography
                     color="#0D99FF"
                     fontFamily="Impact"
-                    fontSize={34}
+                    fontSize={{ lg: 34, xs: 28 }}
                     fontWeight={400}
                     lineHeight="44px"
                   >
@@ -201,16 +211,17 @@ const Footer = () => {
                   style={{
                     fontWeight: 400,
                     fontFamily: "Impact",
-                    fontSize: 40,
+                    fontSize: isMobile ? 34 : 38,
                     color: "#fff",
                     lineHeight: "48px",
                     textDecoration: "none",
                   }}
                   href="tel:+99363885234"
                 >
-                  +7 (812) 220-11-43
+                  +8 (800) 234-12-82
                 </a>
-                <span
+                <a
+                  href="tel:+99363885234"
                   style={{
                     color: "#0D92F3",
                     textDecoration: "underline",
@@ -222,7 +233,7 @@ const Footer = () => {
                   }}
                 >
                   Заказать обратный звонок
-                </span>
+                </a>
                 <Stack mt={{ lg: 5, xs: 3 }} mb={{ lg: 0, xs: 5 }} spacing={1}>
                   {/* <a href="mailto:support@example.com?subject=Support Request&body=Dear Support,&tag=support_ticket">Submit a Support Ticket</a> */}
                   <a

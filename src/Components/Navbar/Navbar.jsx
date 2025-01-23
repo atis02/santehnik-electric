@@ -149,6 +149,11 @@ const Navbar = () => {
           >
             УСЛУГИ САНТЕХНИКА В САНКТ - ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ{" "}
           </Typography>
+          <span
+            style={{ fontFamily: "Montserrat", color: "#fff", fontSize: 10 }}
+          >
+            Мы работаем с 09:00-22:00
+          </span>
         </Stack>
 
         <Stack
@@ -333,7 +338,7 @@ const Navbar = () => {
               }}
               href="tel:+99363885234"
             >
-              +7 (812) 220-11-43
+              +8 (800) 234-12-82
             </a>
             <span
               style={{
@@ -343,6 +348,7 @@ const Navbar = () => {
                 lineHeight: "16px",
                 fontFamily: "Roboto",
                 textTransform: "uppercase",
+                textAlign: "center",
               }}
             >
               Заказать обратный звонок

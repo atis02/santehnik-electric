@@ -68,7 +68,7 @@ const index = () => {
   return (
     <Box width="100%">
       <Typography
-        fontSize={{ lg: 20, md: 18, xs: 15 }}
+        fontSize={{ lg: 24, md: 22, xs: 20 }}
         fontWeight={700}
         data-aos="fade-up"
         data-aos-delay="200"
@@ -77,6 +77,7 @@ const index = () => {
         pt={{ lg: "50px", md: "30px", xs: "10px" }}
         className="title"
         mb={"20px"}
+        mt={"20px"}
       >
         Наши  услуги 
       </Typography>
@@ -102,7 +103,7 @@ const index = () => {
               alignItems="center"
               justifyContent="space-between"
               bgcolor="#292929"
-              width={{ lg: 300, md: 300, sm: 300, xs: 370 }}
+              width={{ lg: 300, md: 300, sm: 300, xs: 340 }}
               minHeight={350}
               p={2}
               borderRadius="20px"
@@ -151,7 +152,7 @@ const index = () => {
                   }}
                   href="tel:+99363885234"
                 >
-                  +7 (812) 220-11-43
+                  +8 (800) 234-12-82
                 </a>
               </Button>
             </Stack>
