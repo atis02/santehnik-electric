@@ -147,9 +147,21 @@ const Home = () => {
             // onClick={() => setOpen(true)}
           >
             <span className="button-background"></span>
-            <span className="button-text">
+            <span
+              className="button-text"
+              style={{ flexDirection: "column", lineHeight: "15px" }}
+            >
               {" "}
               Вызвать мастера
+              <span
+                style={{
+                  display: isMobile ? "flex" : "none",
+                  fontFamily: "Montserrat",
+                  fontSize: 12,
+                }}
+              >
+                8 (800) 234-12-82
+              </span>
               {/* <EastIcon /> */}
             </span>
           </a>

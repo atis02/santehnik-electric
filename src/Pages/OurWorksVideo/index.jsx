@@ -80,7 +80,7 @@ const Models = () => {
         flexDirection: "column",
         scrollMarginTop: "50px",
       }}
-      id="Models"
+      id="price"
     >
       <Typography
         fontSize={{ lg: 30, md: 28, xs: 25 }}

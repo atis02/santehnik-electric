@@ -66,7 +66,7 @@ const index = () => {
     },
   ];
   return (
-    <Box width="100%">
+    <Box width="100%" className="services">
       <Typography
         fontSize={{ lg: 24, md: 22, xs: 20 }}
         fontWeight={700}

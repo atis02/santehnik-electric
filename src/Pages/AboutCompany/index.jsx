@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     <Box
-      id="aboutCompany"
+      id="about"
       sx={{
         height: { lg: "450px", md: "360px", sm: "300px", xs: "780px" },
         width: "100%",

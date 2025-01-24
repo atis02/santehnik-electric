@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   MenuItem,
   Box,
@@ -15,13 +15,15 @@ import Language from "../../Components/Language/Language";
 import { useTranslation } from "react-i18next";
 import MenuIcon from "@mui/icons-material/Menu";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(false);
   const open = Boolean(anchorEl);
-
+  const sectionRef = useRef(null);
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -53,11 +55,17 @@ const Navbar = () => {
     setAnchorEl(null);
   };
   const navBottomData = [
-    { title: "услуги" },
-    { title: "цены" },
-    { title: "о компании" },
-    { title: "контакты" },
+    { title: "услуги", link: "services" },
+    { title: "цены", link: "price" },
+    { title: "о компании", link: "about" },
+    { title: "контакты", link: "contacts" },
   ];
+  const scrollToSection = () => {
+    console.log("test");
+
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <Stack
       direction="column"
@@ -430,7 +438,7 @@ const Navbar = () => {
                 {navBottomData.map((item, index) => (
                   <Stack key={index}>
                     {/* <NavLink></NavLink> */}
-                    <Typography
+                    {/* <Typography
                       fontSize={16}
                       fontFamily="Roboto"
                       fontWeight={500}
@@ -439,7 +447,24 @@ const Navbar = () => {
                       className="title"
                     >
                       {item.title}
-                    </Typography>
+                    </Typography> */}
+                    <Link
+                      className="title"
+                      to={item.link}
+                      smooth={true}
+                      style={{
+                        fontFamily: "Roboto",
+                        fontSize: 16,
+                        fontWeight: 500,
+                        textTransform: "uppercase",
+                        cursor: "pointer",
+                      }}
+                      duration={500}
+                      offset={-120} // Adjust if you have a fixed header
+                      onClick={toggleMobileMenu}
+                    >
+                      {item.title}
+                    </Link>
                   </Stack>
                 ))}
               </Stack>
@@ -458,17 +483,42 @@ const Navbar = () => {
         minHeight={{ lg: 30, md: 30, sm: 28, xs: 20 }}
       >
         {navBottomData.map((item, index) => (
-          <Stack key={index}>
+          <Stack key={index} onClick={scrollToSection}>
             {/* <NavLink></NavLink> */}
-            <Typography
-              fontSize={16}
-              fontFamily="Roboto"
-              fontWeight={500}
-              textTransform="uppercase"
-              color="#fff"
+            {/* <NavLink
+              className="nav-links"
+              // style={navStyle}
+              to="/about"
+              // onClick={() => {
+              //   setMobileMenuOpen(false);
+              //   window.scrollTo(0, 0);
+              //   setOpenDropdown2(false);
+              //   setOpenDropdownServices2(false);
+              // }}
+            >
+              {t("about")}
+            </NavLink> */}
+            <Link
+              className="nav-links"
+              to={item.link}
+              smooth={true}
+              style={{
+                fontFamily: "Roboto",
+                fontSize: 16,
+                fontWeight: 500,
+                textTransform: "uppercase",
+                cursor: "pointer",
+              }}
+              duration={500}
+              offset={-120} // Adjust if you have a fixed header
+              // onClick={() => {
+              //   setMobileMenuOpen(false); // Optional actions
+              //   setOpenDropdown2(false);
+              //   setOpenDropdownServices2(false);
+              // }}
             >
               {item.title}
-            </Typography>
+            </Link>
           </Stack>
         ))}
       </Stack>

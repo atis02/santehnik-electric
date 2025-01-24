@@ -4,24 +4,24 @@ import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
 
 const RussianPhoneField = () => {
-  const [phoneNumber, setPhoneNumber] = useState("+");
+  const [phoneNumber, setPhoneNumber] = useState(""); // Убрали "+", начальное значение пустое
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     const input = e.target.value;
 
-    // Ограничение длины номера (12 символов, включая "+7" или "+8")
-    if (input.length > 12) {
+    // Ограничение длины номера (11 символов для формата 7XXXXXXXXXX)
+    if (input.length > 11) {
       return;
     }
 
-    // Разрешить только цифры, пробелы, скобки и дефисы
-    if (/^\+[\s\d()-]*$/.test(input)) {
+    // Разрешить только цифры
+    if (/^\d*$/.test(input)) {
       setPhoneNumber(input);
 
-      // Проверка, что номер начинается с "+7" или "+8"
-      if (input.length >= 2 && !/^\+(7|8)/.test(input)) {
+      // Проверка, что номер начинается с 7 или 8
+      if (input.length >= 1 && !/^[78]/.test(input)) {
         setError(true);
       } else {
         setError(false);
@@ -36,9 +36,9 @@ const RussianPhoneField = () => {
     setLoading(true);
 
     // Убедиться, что номер корректен
-    if (phoneNumber.length !== 12 || !/^\+(7|8)/.test(phoneNumber) || error) {
+    if (phoneNumber.length !== 11 || !/^[78]/.test(phoneNumber) || error) {
       toast.error(
-        "Введите действительный номер телефона (+7 или +8 и 10 цифр)."
+        "Введите действительный номер телефона (начинается с 7 или 8, 11 цифр)."
       );
       setLoading(false);
       return;
@@ -54,7 +54,7 @@ const RussianPhoneField = () => {
       .then((result) => {
         console.log("Email sent successfully!", result.text);
         toast.success("Успешно отправлено!");
-        setPhoneNumber("+"); // Сброс номера
+        setPhoneNumber(""); // Сброс номера
         setLoading(false);
       })
       .catch((error) => {
@@ -89,12 +89,12 @@ const RussianPhoneField = () => {
           error={error}
           helperText={
             error
-              ? "Номер должен начинаться с +7 или +8 и содержать 10 цифр."
-              : "Формат: +7 (XXX) XXX-XX-XX"
+              ? "Номер должен начинаться с 7 или 8 и содержать 11 цифр."
+              : "Формат: 7XXXXXXXXXX или 8XXXXXXXXXX"
           }
           InputProps={{
             inputMode: "tel",
-            placeholder: "+7 (XXX) XXX-XX-XX",
+            placeholder: "7XXXXXXXXXX или 8XXXXXXXXXX",
           }}
           sx={{
             width: "300px",

@@ -42,7 +42,7 @@ const Footer = () => {
           },
           boxShadow: "0px -2px 24px -4px rgba(0,0,0,0.75)",
         }}
-        id="Footer"
+        id="contacts"
       >
         {/* <Container
         sx={{
