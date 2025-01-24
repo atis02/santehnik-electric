@@ -103,7 +103,7 @@ const index = () => {
               alignItems="center"
               justifyContent="space-between"
               bgcolor="#292929"
-              width={{ lg: 300, md: 300, sm: 300, xs: 340 }}
+              width={{ lg: 300, md: 300, sm: 300, xs: 300 }}
               minHeight={350}
               p={2}
               borderRadius="20px"

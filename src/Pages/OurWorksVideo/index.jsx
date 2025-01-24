@@ -188,11 +188,11 @@ const Models = () => {
                         justifyContent="space-between"
                         alignItems="start"
                         width="90%"
-                        spacing={2}
+                        spacing={{ lg: 2, xs: 1 }}
                       >
                         <Typography
                           fontFamily="Montserrat"
-                          fontSize={{ lg: 14, md: 14, sm: 13, xs: 12 }}
+                          fontSize={{ lg: 14, md: 14, sm: 13, xs: 10 }}
                           fontWeight={500}
                           textAlign="justify"
                         >
@@ -200,13 +200,16 @@ const Models = () => {
                         </Typography>
                         <Typography
                           flex={2}
-                          borderBottom="3px dashed #ccc"
+                          borderBottom={{
+                            lg: "3px dashed #ccc",
+                            xs: "1.5px dashed #ccc",
+                          }}
                           margin="0 20px"
                           height={15}
                         ></Typography>
                         <Typography
                           fontFamily="Montserrat"
-                          fontSize={{ lg: 16, md: 14, sm: 13, xs: 12 }}
+                          fontSize={{ lg: 16, md: 14, sm: 13, xs: 10 }}
                           fontWeight={600}
                           color="#fff"
                           textAlign="start"
@@ -220,7 +223,7 @@ const Models = () => {
                       <a
                         href={item.pdfUrl}
                         style={{ color: "#fff", fontFamily: "Montserrat" }}
-                        download="CustomFileName.pdf"
+                        download={item.pdfUrl}
                       >
                         Скачать прайс-лист
                       </a>
