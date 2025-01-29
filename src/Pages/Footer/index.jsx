@@ -200,11 +200,20 @@ const Footer = () => {
                   </Typography>
                 </Stack>
               </Stack>
-
+              <Stack
+                mt={{ lg: 1, xs: 2 }}
+                ml={{ lg: -23, md: 0, sm: 0, xs: 0 }}
+                maxWidth={{ lg: "28%", md: "48%", sm: "48%", xs: "95%" }}
+              >
+                <Typography>
+                  ИП Техова Джесика Муртазовна Адрес: г.Санкт-Петербург ул.
+                  Домостроительная 16 ИНН 151208944438
+                </Typography>
+              </Stack>
               <Stack
                 direction="column"
                 // width="27%"
-                width={{ lg: "22%", md: "27%", sm: "50%", xs: "90%" }}
+                maxWidth={{ lg: "22%", md: "70%", sm: "50%", xs: "90%" }}
                 mt={{ lg: 0, xs: 2 }}
               >
                 <a
