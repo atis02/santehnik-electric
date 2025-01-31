@@ -24,7 +24,7 @@ const Footer = () => {
       <Box
         sx={{
           // background: "#2F2F2F",
-          height: { lg: "220px", md: "100%", xs: "100%" },
+          height: { lg: "250px", md: "100%", xs: "100%" },
           // backgroundImage: "url('/images/AboutHorizontal.png')",
           // backgroundRepeat: "no-repeat",
           // backgroundSize: "cover",
@@ -148,12 +148,12 @@ const Footer = () => {
                     fontFamily: "Impact",
                   }}
                 >
-                  {/* <img
-                      src="/images/ReModel.jpg"
-                      style={{ width: "100%", height: "100%", pt: 5 }}
-                      alt="LOGO"
-                    /> */}
-                  <Typography
+                  <img
+                    src="/images/logo (3).png"
+                    style={{ width: 270, height: 120, pt: 5 }}
+                    alt="LOGO"
+                  />
+                  {/* <Typography
                     color="#0D99FF"
                     fontFamily="Impact"
                     fontSize={{ lg: 34, xs: 28 }}
@@ -171,7 +171,7 @@ const Footer = () => {
                   >
                     {" "}
                     Электрик
-                  </span>
+                  </span> */}
                 </a>
                 <Stack>
                   <Typography
@@ -179,7 +179,7 @@ const Footer = () => {
                     fontWeight={300}
                     fontSize={14}
                     color="#fff"
-                    width={{ lg: "60%", md: "60%", sm: "60%", xs: "90%" }}
+                    width={{ lg: "85%", md: "60%", sm: "60%", xs: "90%" }}
                     lineHeight="17px"
                     textTransform="uppercase"
                   >
@@ -191,7 +191,7 @@ const Footer = () => {
                     fontWeight={400}
                     fontSize={18}
                     color="#fff"
-                    mt={{ lg: 5, xs: 2 }}
+                    mt={{ lg: 1, xs: 2 }}
                     // width="57%"
                     width={{ lg: "60%", md: "60%", sm: "60%", xs: "90%" }}
                     lineHeight="27px"
@@ -203,7 +203,7 @@ const Footer = () => {
               <Stack
                 mt={{ lg: 1, xs: 2 }}
                 ml={{ lg: -23, md: 0, sm: 0, xs: 0 }}
-                maxWidth={{ lg: "28%", md: "48%", sm: "48%", xs: "95%" }}
+                maxWidth={{ lg: "38%", md: "48%", sm: "48%", xs: "95%" }}
               >
                 <Typography>
                   ИП Техова Джесика Муртазовна Адрес: г.Санкт-Петербург ул.

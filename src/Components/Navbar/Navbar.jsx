@@ -127,7 +127,12 @@ const Navbar = () => {
             style={{ width: "100%", height: "100%", pt: 5 }}
             alt="LOGO"
           /> */}
-            <Typography
+            <img
+              src="/images/logo (3).png"
+              style={{ width: 270, height: 120, pt: 5 }}
+              alt="LOGO"
+            />
+            {/* <Typography
               color="#0D99FF"
               fontFamily="Impact"
               fontSize={18}
@@ -145,20 +150,27 @@ const Navbar = () => {
             >
               {" "}
               Электрик
-            </span>
+            </span> */}
           </a>
           <Typography
             fontFamily="Roboto"
             fontWeight={300}
-            fontSize={14}
+            fontSize={12}
             color="#fff"
-            width="90%"
+            width="80%"
             lineHeight="17px"
+            mt={-3}
+            ml={7}
           >
             УСЛУГИ САНТЕХНИКА В САНКТ - ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ{" "}
           </Typography>
           <span
-            style={{ fontFamily: "Montserrat", color: "#fff", fontSize: 10 }}
+            style={{
+              fontFamily: "Montserrat",
+              color: "#fff",
+              fontSize: 10,
+              marginLeft: 56,
+            }}
           >
             Мы работаем с 09:00-22:00
           </span>
@@ -170,21 +182,25 @@ const Navbar = () => {
           sx={{
             display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
           }}
+          justifyContent="space-between"
         >
           <Stack
             // width={{ lg: 70, md: 80, sm: 70, xs: 55 }}
             // height={{ lg: 80, md: 75, sm: 70, xs: 55 }}
-            maxWidth="28%"
+            width="18%"
+            direction="column"
+            // alignItems="center"
           >
             <a
               href="/"
               style={{
                 textDecoration: "none",
                 display: "flex",
-                alignItems: "center",
-                gap: 2,
+                // alignItems: "center",
+                // gap: 2,
                 fontSize: 34,
                 fontFamily: "Impact",
+                // marginLeft: 60,
               }}
             >
               {/* <img
@@ -192,7 +208,12 @@ const Navbar = () => {
             style={{ width: "100%", height: "100%", pt: 5 }}
             alt="LOGO"
           /> */}
-              <Typography
+              <img
+                src="/images/logo (3).png"
+                style={{ width: 160, height: 80, pt: 5 }}
+                alt="LOGO"
+              />
+              {/* <Typography
                 color="#0D99FF"
                 fontFamily="Impact"
                 fontSize={34}
@@ -210,9 +231,9 @@ const Navbar = () => {
               >
                 {" "}
                 Электрик
-              </span>
+              </span> */}
             </a>
-            <Typography
+            {/* <Typography
               fontFamily="Roboto"
               fontWeight={300}
               fontSize={14}
@@ -221,7 +242,7 @@ const Navbar = () => {
               lineHeight="17px"
             >
               УСЛУГИ САНТЕХНИКА В САНКТ - ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ{" "}
-            </Typography>
+            </Typography> */}
           </Stack>
 
           <Stack direction="column" width="22%">
@@ -318,7 +339,7 @@ const Navbar = () => {
               fontFamily="Roboto"
               color="#fff"
             >
-              Услуги Электрика
+              УСЛУГИ САНТЕХНИКА В
             </Typography>
             <span
               style={{
@@ -330,7 +351,7 @@ const Navbar = () => {
                 textTransform: "uppercase",
               }}
             >
-              с гарантией качества
+              САНКТ - ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ{" "}
             </span>
           </Stack>
 
@@ -356,7 +377,7 @@ const Navbar = () => {
                 lineHeight: "16px",
                 fontFamily: "Roboto",
                 textTransform: "uppercase",
-                textAlign: "center",
+                // textAlign: "center",
               }}
             >
               Заказать обратный звонок

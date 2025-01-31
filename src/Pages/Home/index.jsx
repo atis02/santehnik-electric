@@ -31,7 +31,7 @@ const Home = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const dataMainPage = [
-    { title: "Выезд мастера в течении 1 часа" },
+    { title: "Полный спектр услуг сантехника и электрика" },
     {
       title:
         "15% скидка пенсионерам , многодетным , ветераном ВОВ, участникам СВО ",
@@ -230,7 +230,7 @@ const Home = () => {
               alt=""
             />
             <Typography color="#0D99FF" fontSize={18} fontWeight={600}>
-              Приезд в течении часа
+              Чистота после работы
             </Typography>
           </Stack>
           <Stack
