@@ -1,9 +1,18 @@
 // service_znopyy7
 
 import React, { useState } from "react";
-import { Modal, Box, TextField, Button, Typography } from "@mui/material";
+import {
+  Modal,
+  Box,
+  TextField,
+  Button,
+  Typography,
+  IconButton,
+  Stack,
+} from "@mui/material";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
+import CloseIcon from "@mui/icons-material/Close";
 
 const SendEmailModal = ({ open, setOpen }) => {
   const [formData, setFormData] = useState({
@@ -13,9 +22,33 @@ const SendEmailModal = ({ open, setOpen }) => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
+  const handleChangePhone = (e) => {
+    const input = e.target.value;
+
+    // Ограничение длины номера (11 символов для формата 7XXXXXXXXXX)
+    if (input.length > 11) {
+      return;
+    }
+
+    // Разрешить только цифры
+    if (/^\d*$/.test(input)) {
+      setPhoneNumber(input);
+
+      // Проверка, что номер начинается с 7 или 8
+      if (input.length >= 1 && !/^[78]/.test(input)) {
+        setError(true);
+      } else {
+        setError(false);
+      }
+    } else {
+      setError(true);
+    }
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -54,23 +87,37 @@ const SendEmailModal = ({ open, setOpen }) => {
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: 400,
-            bgcolor: "background.paper",
+            bgcolor: "#090909",
             borderRadius: 2,
+            color: "#fff",
             boxShadow: 24,
-            p: 4,
+            p: 2,
           }}
         >
-          <Typography variant="h6" component="h2" gutterBottom>
-            Send an Email
-          </Typography>
-          <form onSubmit={handleSendEmail}>
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Typography variant="h6" component="h2" gutterBottom>
+              Send an Email
+            </Typography>
+            <IconButton onClick={() => setOpen(false)}>
+              <CloseIcon
+                sx={{
+                  color: "#fff",
+                }}
+              />
+            </IconButton>
+          </Stack>
+          {/* <form onSubmit={handleSendEmail}>
             <TextField
               fullWidth
               label="Ваше Имя и Фамилия"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              sx={{ mb: 2 }}
+              sx={{ mb: 2, color: "#fff" }}
               required
             />
             <TextField
@@ -101,6 +148,96 @@ const SendEmailModal = ({ open, setOpen }) => {
               value={formData.message}
               onChange={handleChange}
               sx={{ mb: 2 }}
+              required
+            />
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              fullWidth
+              disabled={loading}
+            >
+              {loading ? "Отправляем..." : "Отправить "}
+            </Button>
+          </form> */}
+
+          <form onSubmit={handleSendEmail}>
+            <TextField
+              fullWidth
+              label="Ваше Имя и Фамилия"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              sx={{
+                mb: 2,
+                "& .MuiInputLabel-root": { color: "#494949" }, // Label color
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "#fff" }, // Border color
+                  "&:hover fieldset": { borderColor: "#fff" }, // Border color on hover
+                  "&.Mui-focused fieldset": { borderColor: "#fff" }, // Border color when focused
+                  "& input": { color: "#fff" }, // Input text color
+                },
+              }}
+              required
+            />
+            <TextField
+              fullWidth
+              label="Ваш номер"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              sx={{
+                mb: 2,
+                "& .MuiInputLabel-root": { color: "#494949" }, // Label color
+
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "#fff" },
+                  "&:hover fieldset": { borderColor: "#fff" },
+                  "&.Mui-focused fieldset": { borderColor: "#fff" },
+                  "& input": { color: "#fff" },
+                },
+              }}
+              required
+            />
+            <TextField
+              fullWidth
+              label="Тип услуги"
+              name="typeService"
+              value={formData.typeService}
+              onChange={handleChange}
+              sx={{
+                mb: 2,
+                "& .MuiInputLabel-root": { color: "#494949" }, // Label color
+
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "#fff" },
+                  "&:hover fieldset": { borderColor: "#fff" },
+                  "&.Mui-focused fieldset": { borderColor: "#fff" },
+                  "& input": { color: "#fff" },
+                },
+              }}
+              required
+            />
+
+            <TextField
+              fullWidth
+              label="Ваше сообщение"
+              name="message"
+              multiline
+              rows={4}
+              value={formData.message}
+              onChange={handleChange}
+              sx={{
+                mb: 2,
+                "& .MuiInputLabel-root": { color: "#494949" }, // Label color
+
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "#fff" },
+                  "&:hover fieldset": { borderColor: "#fff" },
+                  "&.Mui-focused fieldset": { borderColor: "#fff" },
+                  "& textarea": { color: "#fff" }, // For multiline text area
+                },
+              }}
               required
             />
             <Button

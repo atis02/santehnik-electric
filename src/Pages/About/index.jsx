@@ -100,9 +100,29 @@ const About = () => {
           <RussianPhoneField />
           <Typography fontFamily="Montserrat" fontSize={14} color="#fff">
             Нажимая, я принимаю условия{" "}
-            <a href="/" style={{ color: "#0E93F4", fontFamily: "Montserrat" }}>
+            <a
+              href="/agreement.docx"
+              download="/agreement.docx"
+              style={{
+                color: "#0E93F4",
+                fontFamily: "Montserrat",
+              }}
+            >
               {" "}
               пользовательского соглашения
+            </a>
+            <span style={{ fontFamily: "Montserrat", marginLeft: 10 }}>и</span>
+            <a
+              href="/policy.docx"
+              download="/agreement.docx"
+              style={{
+                color: "#0E93F4",
+                fontFamily: "Montserrat",
+                marginLeft: 10,
+              }}
+            >
+              {" "}
+              политика конфиденциальности
             </a>
           </Typography>
         </Stack>

@@ -139,12 +139,12 @@ const Home = () => {
           </Stack>
           <Toaster />
           <a
-            href="tel:8 (800) 234-12-82"
+            // href="tel:8 (800) 234-12-82"
             className="button"
             data-aos="fade-up"
             data-aos-once="true"
             data-aos-delay="800"
-            // onClick={() => setOpen(true)}
+            onClick={() => setOpen(true)}
           >
             <span className="button-background"></span>
             <span
