@@ -100,7 +100,7 @@ const SendEmailModal = ({ open, setOpen }) => {
             justifyContent="space-between"
           >
             <Typography variant="h6" component="h2" gutterBottom>
-              Send an Email
+              Оставьте заявку
             </Typography>
             <IconButton onClick={() => setOpen(false)}>
               <CloseIcon
@@ -110,56 +110,6 @@ const SendEmailModal = ({ open, setOpen }) => {
               />
             </IconButton>
           </Stack>
-          {/* <form onSubmit={handleSendEmail}>
-            <TextField
-              fullWidth
-              label="Ваше Имя и Фамилия"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              sx={{ mb: 2, color: "#fff" }}
-              required
-            />
-            <TextField
-              fullWidth
-              label="Ваш номер"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-              sx={{ mb: 2 }}
-              required
-            />
-            <TextField
-              fullWidth
-              label="Тип услуги"
-              name="typeService"
-              value={formData.typeService}
-              onChange={handleChange}
-              sx={{ mb: 2 }}
-              required
-            />
-
-            <TextField
-              fullWidth
-              label="Ваше сообщение"
-              name="message"
-              multiline
-              rows={4}
-              value={formData.message}
-              onChange={handleChange}
-              sx={{ mb: 2 }}
-              required
-            />
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              fullWidth
-              disabled={loading}
-            >
-              {loading ? "Отправляем..." : "Отправить "}
-            </Button>
-          </form> */}
 
           <form onSubmit={handleSendEmail}>
             <TextField
@@ -250,6 +200,33 @@ const SendEmailModal = ({ open, setOpen }) => {
               {loading ? "Отправляем..." : "Отправить "}
             </Button>
           </form>
+          <Typography fontFamily="Montserrat" fontSize={14} color="#fff">
+            Нажимая, вы соглашаетесь с условиями{" "}
+            <a
+              href="/agreement.docx"
+              download="/agreement.docx"
+              style={{
+                color: "#0E93F4",
+                fontFamily: "Montserrat",
+              }}
+            >
+              {" "}
+              пользовательского соглашения
+            </a>
+            <span style={{ fontFamily: "Montserrat", marginLeft: 10 }}>и</span>
+            <a
+              href="/policy.docx"
+              download="/agreement.docx"
+              style={{
+                color: "#0E93F4",
+                fontFamily: "Montserrat",
+                marginLeft: 10,
+              }}
+            >
+              {" "}
+              политика конфиденциальности
+            </a>
+          </Typography>
         </Box>
       </Modal>
     </div>

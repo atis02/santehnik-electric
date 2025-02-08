@@ -138,33 +138,56 @@ const Home = () => {
             </Typography>
           </Stack>
           <Toaster />
-          <a
-            // href="tel:8 (800) 234-12-82"
-            className="button"
-            data-aos="fade-up"
-            data-aos-once="true"
-            data-aos-delay="800"
-            onClick={() => setOpen(true)}
+          <Stack
+            direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
+            spacing={{ lg: 34, xs: 2 }}
           >
-            <span className="button-background"></span>
-            <span
-              className="button-text"
-              style={{ flexDirection: "column", lineHeight: "15px" }}
+            <a
+              href="tel:8 (800) 234-12-82"
+              className="button"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-delay="800"
+              // onClick={() => setOpen(true)}
             >
-              {" "}
-              Вызвать мастера
+              <span className="button-background"></span>
               <span
-                style={{
-                  display: isMobile ? "flex" : "none",
-                  fontFamily: "Montserrat",
-                  fontSize: 12,
-                }}
+                className="button-text"
+                style={{ flexDirection: "column", lineHeight: "15px" }}
               >
-                8 (800) 234-12-82
+                {" "}
+                Оставить заявку
+                {/* <EastIcon /> */}
               </span>
-              {/* <EastIcon /> */}
-            </span>
-          </a>
+            </a>
+            <a
+              // href="tel:8 (800) 234-12-82"
+              className="button"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-delay="800"
+              onClick={() => setOpen(true)}
+            >
+              <span className="button-background"></span>
+              <span
+                className="button-text"
+                style={{ flexDirection: "column", lineHeight: "15px" }}
+              >
+                {" "}
+                Вызвать мастера
+                <span
+                  style={{
+                    display: isMobile ? "flex" : "none",
+                    fontFamily: "Montserrat",
+                    fontSize: 12,
+                  }}
+                >
+                  8 (800) 234-12-82
+                </span>
+                {/* <EastIcon /> */}
+              </span>
+            </a>
+          </Stack>
         </Stack>
         <Stack
           width={{ lg: "80%", md: "100%", sm: "100%", xs: "60%" }}
