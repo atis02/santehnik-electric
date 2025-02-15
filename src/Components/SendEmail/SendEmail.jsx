@@ -128,7 +128,6 @@ const SendEmailModal = ({ open, setOpen }) => {
                   "& input": { color: "#fff" }, // Input text color
                 },
               }}
-              required
             />
             <TextField
               fullWidth
@@ -166,7 +165,6 @@ const SendEmailModal = ({ open, setOpen }) => {
                   "& input": { color: "#fff" },
                 },
               }}
-              required
             />
 
             <TextField
@@ -188,7 +186,6 @@ const SendEmailModal = ({ open, setOpen }) => {
                   "& textarea": { color: "#fff" }, // For multiline text area
                 },
               }}
-              required
             />
             <Button
               type="submit"
