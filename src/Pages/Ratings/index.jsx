@@ -19,35 +19,51 @@ import toast, { Toaster } from "react-hot-toast";
 // SwiperCore.use([Navigation, Pagination]);
 
 const RatingsSwiper = () => {
-  const [ratings, setRatings] = useState([]);
-  const [openModal, setOpenModal] = useState(false);
-  const [newRatingValue, setNewRatingValue] = useState(4);
-  const [newDescription, setNewDescription] = useState("");
-  const [user, setUser] = useState("");
+  const [ratings, setRatings] = useState([
+    {
+      value: 4.5,
+      desc: "Недавно мне понадобилась помощь сантехника для устранения протечки в ванной комнате. Я обратился к Сантехник Питер , и остался очень доволен оказанными услугами.Сантехник приехал точно в назначенное время, что очень приятно. Он был вежлив и профессионален.",
+    },
+    {
+      value: 5,
+
+      desc: "Хочу сказать спасибо за отличную работу! Мастер приехал вовремя, что очень приятно. Цены полностью соответствовали тем, что указаны на сайте, что также порадовало. Замена смесителя прошла быстро и качественно. Рекомендую услуги компании, а именно сантехника Евгения всем, кто ищет надежного специалиста!",
+    },
+    {
+      value: 4.5,
+
+      desc: "Хочу поблагодарить сантехника за быструю и качественную работу! В 21:07 я позвонил в компанию с проблемой засора, и всего через 43 минуты мастер уже был у меня дома. Он быстро устранил проблему, и я остался очень доволен сервисом",
+    },
+    {
+      value: 5,
+
+      desc: "Долго искала сантехника , обратилась в компанию Сантехник Питера. Мастер приехал в тот же день , заменил трубу в ванной , сам съездил в магазин купил все, принес чек что внушает еще больше доверия, подписали договор и плюс гарантия. Спасибо , рекомендую.",
+    },
+  ]);
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   // Fetch ratings from localStorage on component mount
-  useEffect(() => {
-    const storedRatings = JSON.parse(localStorage.getItem("ratings")) || [];
-    setRatings(storedRatings);
-  }, []);
+  // useEffect(() => {
+  //   const storedRatings = JSON.parse(localStorage.getItem("ratings")) || [];
+  //   setRatings(storedRatings);
+  // }, []);
 
   // Save new rating to localStorage
-  const addRating = () => {
-    if (!newDescription.trim() || newRatingValue === 0) return; // Validate inputs
-    const updatedRatings = [
-      ...ratings,
-      { value: newRatingValue, description: newDescription, name: user },
-    ];
-    setRatings(updatedRatings);
-    localStorage.setItem("ratings", JSON.stringify(updatedRatings));
-    setNewRatingValue(0); // Reset rating
-    setNewDescription(""); // Clear input field
-    setOpenModal(false); // Close modal
-    toast.success("Успешно добавлен!");
-  };
+  // const addRating = () => {
+  //   if (!newDescription.trim() || newRatingValue === 0) return; // Validate inputs
+  //   const updatedRatings = [
+  //     ...ratings,
+  //     { value: newRatingValue, description: newDescription, name: user },
+  //   ];
+  //   setRatings(updatedRatings);
+  //   localStorage.setItem("ratings", JSON.stringify(updatedRatings));
+  //   setNewRatingValue(0); // Reset rating
+  //   setNewDescription(""); // Clear input field
+  //   setOpenModal(false); // Close modal
+  //   toast.success("Успешно добавлен!");
+  // };
   return (
     // <div style={{ maxWidth: "400px", margin: "auto" }}>
     //   <h2>Ratings</h2>
@@ -125,7 +141,7 @@ const RatingsSwiper = () => {
         </Typography>
         <Toaster />
         {/* Button to open the modal */}
-        <Button
+        {/* <Button
           variant="contained"
           color="primary"
           onClick={() => setOpenModal(true)}
@@ -138,7 +154,7 @@ const RatingsSwiper = () => {
           }}
         >
           Добавить отзыв
-        </Button>
+        </Button> */}
       </Stack>
 
       {/* Swiper to display ratings */}
@@ -146,7 +162,7 @@ const RatingsSwiper = () => {
         spaceBetween={15}
         slidesPerView={isMobile ? 1 : 3.5}
         pagination={{ clickable: true }}
-        style={{ overflow: "hidden", minHeight: 200 }}
+        style={{ overflow: "hidden" }}
         className="otzyw"
       >
         {ratings.map((rating, index) => (
@@ -154,17 +170,20 @@ const RatingsSwiper = () => {
             <div
               style={{
                 padding: "1rem",
-                background: "#292929",
+                background: "#fff",
                 border: "1px solid #0D92F3 ",
                 color: "#fff",
-                // textAlign: "center",
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                minHeight: 200,
+                minHeight: 265,
+                maxHeight: 280,
+                cursor: "pointer",
               }}
             >
               <Rating
                 name="new-rating"
-                value={rating.value}
+                defaultValue={rating.value}
+                precision={0.5}
+                // defaultValue={rating.value}
                 size="large"
                 sx={{
                   "& .MuiRating-iconFilled": { color: "#0D92F3" }, // Filled icon color
@@ -172,11 +191,13 @@ const RatingsSwiper = () => {
                   "& .MuiRating-iconEmpty": { color: "#ccc" }, // Empty icon color
                 }}
               />
-              <Typography variant="h6" color="#0D92F3 ">
-                {rating.name}
-              </Typography>
-              <Typography variant="body1" style={{ marginTop: "0.5rem" }}>
-                {rating.description}
+
+              <Typography
+                variant="body1"
+                color="#0D92F3"
+                style={{ marginTop: "0.5rem" }}
+              >
+                {rating.desc}
               </Typography>
             </div>
           </SwiperSlide>
@@ -184,129 +205,6 @@ const RatingsSwiper = () => {
       </Swiper>
 
       {/* Modal for adding a new rating */}
-      <Modal
-        open={openModal}
-        onClose={() => setOpenModal(false)}
-        aria-labelledby="add-rating-modal"
-        aria-describedby="modal-to-add-rating-and-description"
-      >
-        <Box
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: 400,
-            bgcolor: "#292929",
-            borderRadius: "8px",
-            boxShadow: 24,
-            p: 2,
-          }}
-        >
-          <Stack
-            direction="row"
-            alignItems="center"
-            justifyContent="space-between"
-          >
-            <Typography
-              id="add-rating-modal"
-              color="#fff"
-              variant="h6"
-              component="h2"
-            >
-              Добавьте отзыв!
-            </Typography>
-            <IconButton onClick={() => setOpenModal(false)}>
-              <CloseIcon sx={{ color: "#ffff" }} />
-            </IconButton>
-          </Stack>
-
-          {/* Rating Input */}
-          <Rating
-            name="new-rating"
-            value={newRatingValue}
-            onChange={(event, newValue) => setNewRatingValue(newValue)}
-            size="large"
-            sx={{
-              "& .MuiRating-iconFilled": { color: "#0D92F3" }, // Filled icon color
-              "& .MuiRating-iconHover": { color: "#0D92F3" }, // Hover color
-              "& .MuiRating-iconEmpty": { color: "#ccc" }, // Empty icon color
-            }}
-          />
-
-          {/* Description Input */}
-          <TextField
-            fullWidth
-            label="Имя"
-            // multiline
-            // rows={3}
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
-            sx={{
-              marginTop: 2,
-              "& .MuiOutlinedInput-root": {
-                color: "#fff",
-                "& fieldset": {
-                  borderColor: "white", // Border color
-                },
-                "&:hover fieldset": {
-                  borderColor: "white", // Border color on hover
-                },
-                "&.Mui-focused fieldset": {
-                  borderColor: "white", // Border color when focused
-                },
-              },
-              "& .MuiInputLabel-root": {
-                color: "white", // Label color
-              },
-              "& .MuiInputLabel-root.Mui-focused": {
-                color: "white", // Label color when focused
-              },
-            }}
-          />
-          <TextField
-            fullWidth
-            label="Oписание"
-            multiline
-            rows={3}
-            value={newDescription}
-            onChange={(e) => setNewDescription(e.target.value)}
-            sx={{
-              marginTop: 2,
-              "& .MuiOutlinedInput-root": {
-                color: "#fff",
-                "& fieldset": {
-                  borderColor: "white", // Border color
-                },
-                "&:hover fieldset": {
-                  borderColor: "white", // Border color on hover
-                },
-                "&.Mui-focused fieldset": {
-                  borderColor: "white", // Border color when focused
-                },
-              },
-              "& .MuiInputLabel-root": {
-                color: "white", // Label color
-              },
-              "& .MuiInputLabel-root.Mui-focused": {
-                color: "white", // Label color when focused
-              },
-            }}
-          />
-
-          {/* Add Button */}
-          <Stack alignItems="end">
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={addRating}
-              sx={{ marginTop: 3 }}
-            >
-              Добавить
-            </Button>
-          </Stack>
-        </Box>
-      </Modal>
     </div>
   );
 };

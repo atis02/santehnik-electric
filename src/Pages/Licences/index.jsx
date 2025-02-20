@@ -82,10 +82,7 @@ const TabButtons = () => {
       "aria-controls": `simple-tabpanel-${index}`,
     };
   }
-  const TabData = [
-    { value: 0, title: "Сантехнические услуги" },
-    { value: 1, title: "Электрические услуги" },
-  ];
+  const TabData = [{ value: 0, title: "Сантехнические услуги" }];
   return (
     <Stack
       p={{
@@ -206,25 +203,6 @@ const TabButtons = () => {
             width={{ lg: "60%", md: "60%", sm: "100%", xs: "100%" }}
           >
             <Typography
-              fontFamily="Montserrat"
-              fontWeight={600}
-              fontSize={22}
-              lineHeight="30px"
-              color="#fff"
-              textAlign={{
-                lg: "start",
-                md: "center",
-                sm: "center",
-                xs: "center",
-              }}
-              data-aos="zoom-out"
-              data-aos-once="true"
-              data-aos-delay="550"
-              data-aos-easing="ease-in-out"
-            >
-              1. Сантехнические услуги:
-            </Typography>
-            <Typography
               color="#858585"
               fontFamily="Montserrat"
               fontWeight={500}
@@ -234,11 +212,23 @@ const TabButtons = () => {
               data-aos-delay="650"
               data-aos-easing="ease-in-out"
             >
-              • Установка и замена трубопроводов <br /> • Монтаж и ремонт
-              сантехнических приборов (унитазы, раковины, душевые кабины)
-              <br /> • Устранение протечек <br />• Обслуживание и ремонт
-              водонагревателей
-              <br /> • Установка систем отопления и водоснабжения
+              <br /> •Установка и замена трубопроводов •Сборка/установка/ремонт
+              коллекторных узлов . <br />
+              •Устранение засора ( унитаза, раковины, ванны, сифонов,
+              канализации, душевых кабин)
+              <br /> • Монтаж и ремонт сантехнических приборов (унитазы,
+              инсталляция, биде, раковины , смесители,счетчиков учета
+              воды,душевые кабины) <br />
+              •Установка систем очистки воды ( Geizer(Гейзер); Aquaphor(
+              Аквафор).
+              <br /> •Установка бытовой техники ( стиральная
+              /сушильная/посудомоечная машина) <br />• Устранение протечек
+              <br /> • Обслуживание и ремонт водонагревателей <br />• Установка
+              систем отопления и водоснабжения <br />
+              •Разводка труб ( полипропилен, металлопластик , сшитый полиэтилен
+              «Rehay”)
+              <br /> •Установка/замена и ремонт труб ГВС и ХВС <br />• Черновая
+              сантехника под ключ <br />• Чистовая сантехника под ключ
             </Typography>
             <Stack
               direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
@@ -295,7 +285,7 @@ const TabButtons = () => {
         </Stack>
       </CustomTabPanel>
 
-      <CustomTabPanel value={value} index={1}>
+      {/* <CustomTabPanel value={value} index={1}>
         <Stack
           direction={{ lg: "row", md: "row", sm: "column", xs: "column" }}
           alignItems="center"
@@ -404,7 +394,7 @@ const TabButtons = () => {
             </Stack>
           </Stack>
         </Stack>
-      </CustomTabPanel>
+      </CustomTabPanel> */}
     </Stack>
   );
 };

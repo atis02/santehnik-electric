@@ -29,8 +29,8 @@ const Footer = () => {
           // backgroundRepeat: "no-repeat",
           // backgroundSize: "cover",
           // backgroundPositionY: "-100px",
-          color: "#fff",
-          bgcolor: "#292929",
+          color: "#0D99FF",
+          bgcolor: "#fff",
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
@@ -178,7 +178,7 @@ const Footer = () => {
                     fontFamily="Roboto"
                     fontWeight={300}
                     fontSize={14}
-                    color="#fff"
+                    color="#0D99FF"
                     width={{ lg: "85%", md: "60%", sm: "60%", xs: "90%" }}
                     lineHeight="17px"
                     textTransform="uppercase"
@@ -190,7 +190,7 @@ const Footer = () => {
                     fontFamily="Montserrat"
                     fontWeight={400}
                     fontSize={18}
-                    color="#fff"
+                    color="#0D99FF"
                     mt={{ lg: 1, xs: 2 }}
                     // width="57%"
                     width={{ lg: "60%", md: "60%", sm: "60%", xs: "90%" }}
@@ -221,7 +221,7 @@ const Footer = () => {
                     fontWeight: 400,
                     fontFamily: "Impact",
                     fontSize: isMobile ? 34 : 38,
-                    color: "#fff",
+                    color: "#0D99FF",
                     lineHeight: "48px",
                     textDecoration: "none",
                   }}
@@ -249,7 +249,7 @@ const Footer = () => {
                     href="mailto:santehnikelektrik.pro@gmail.com"
                     style={{
                       fontFamily: "Montserrat",
-                      color: "#fff",
+                      color: "#0D99FF",
                     }}
                   >
                     santehnikelektrik.pro@gmail.com
@@ -258,7 +258,7 @@ const Footer = () => {
                     href="mailto:santehnikelektrik.pro@yandex.ru"
                     style={{
                       fontFamily: "Montserrat",
-                      color: "#fff",
+                      color: "#0D99FF",
                     }}
                   >
                     santehnikelektrik.pro@yandex.ru
@@ -273,16 +273,16 @@ const Footer = () => {
       <Stack
         sx={{
           width: "100%",
-          bgcolor: "gray",
-          height: 1.1,
+          bgcolor: "#0D99FF",
+          height: "0.8px",
         }}
       ></Stack>
       <Typography
-        bgcolor="#292929"
+        bgcolor="#fff"
         fontFamily="Montserrat"
         fontWeight={400}
         fontSize={10}
-        color="#fff"
+        color="#0D99FF"
         p={{
           lg: "10px 85px 7px 85px",
           md: "5px 70px 0 70px",
@@ -298,7 +298,7 @@ const Footer = () => {
         мастер после диагностики. Нажимая, я принимаю условия пользовательского
         соглашения
       </Typography>
-      <Stack bgcolor="#292929">
+      <Stack bgcolor="#fff">
         <Typography
           width="100%"
           data-aos-once="true"
@@ -307,7 +307,7 @@ const Footer = () => {
           fontSize={{ lg: 14, md: 13, sm: 13, xs: 12 }}
           textAlign="center"
           fontFamily="Montserrat"
-          color="#fff"
+          color="#0D99FF"
           fontWeight={500}
           p={1}
         >
@@ -316,7 +316,7 @@ const Footer = () => {
           <a
             href="https://github.com/atis02"
             style={{
-              color: "#fff",
+              color: "#0D99FF",
               textDecoration: "underline",
               fontFamily: "Montserrat",
             }}

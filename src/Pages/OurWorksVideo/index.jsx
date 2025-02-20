@@ -31,21 +31,6 @@ const Models = () => {
 
   const slideData = [
     {
-      mainTitle: "Стоимость услуги Электрика от:",
-      items: [
-        { price: "1100p", title: "Устранение короткого замыкания от " },
-        { price: "900р", title: "Ремонт освещения от " },
-        { price: "900р", title: "Установка осветительных приборов от " },
-        { price: "300р", title: "Установка розеток от " },
-        { price: "300р", title: "Установка выключателей от " },
-        { price: "300р", title: "Прокладка кабеля от " },
-        { price: "600р", title: "Установка распределительной коробки от " },
-        { price: "1500р", title: "Установка счётчика электроэнергии от " },
-        { price: "700р", title: "Установка телевизора от " },
-      ],
-      pdfUrl: "/Электрика.pdf",
-    },
-    {
       mainTitle: "Стоимость услуги Сантехника от:",
       items: [
         { price: "1100p", title: "Устранение протечки от " },
@@ -130,8 +115,8 @@ const Models = () => {
             width: isMobile ? "100%" : "60%",
 
             minHeight: "auto",
-            backgroundColor: "#292929",
-            boxShadow: "5px 5px 5px 5px #4D4D4D80",
+            backgroundColor: "#0D99FF",
+            boxShadow: "3px 3px 3px 3px #4D4D4D80",
           }}
         >
           {slideData.map((item) => (
@@ -141,7 +126,8 @@ const Models = () => {
                 paddingBottom: "20px",
                 width: isMobile ? "90%" : "50%",
                 height: isMobile ? "540px" : "660px",
-                backgroundColor: "#292929",
+                backgroundColor: "#fff",
+                color: "#0D99FF",
                 padding: isMobile ? 10 : 34,
                 display: "flex",
                 alignItems: "center",
@@ -211,7 +197,7 @@ const Models = () => {
                           fontFamily="Montserrat"
                           fontSize={{ lg: 16, md: 14, sm: 13, xs: 10 }}
                           fontWeight={600}
-                          color="#fff"
+                          color="#0D99FF"
                           textAlign="start"
                           minWidth="20%"
                         >
@@ -222,7 +208,7 @@ const Models = () => {
                     <Stack direction="row" alignItems="center">
                       <a
                         href={item.pdfUrl}
-                        style={{ color: "#fff", fontFamily: "Montserrat" }}
+                        style={{ color: "#0D99FF", fontFamily: "Montserrat" }}
                         download={item.pdfUrl}
                       >
                         Скачать прайс-лист
@@ -249,28 +235,15 @@ const Models = () => {
         gap={2}
         padding={isMobile ? 2 : 0}
       >
-        <Stack gap="40px">
-          {/* <Stack direction="row" alignItems="center">
-            <a
-              href="/Электрика.pdf"
-              style={{ color: "#fff", fontFamily: "Montserrat" }}
-              download="CustomFileName.pdf"
-            >
-              Скачать прайс-лист
-            </a>
-            <img
-              src="/images/pdfIcon.png"
-              style={{ width: 24, height: 24 }}
-              alt=""
-            />
-          </Stack> */}
+        {/* <Stack gap="40px">
+          
           <Typography color="#fff" fontFamily="Montserrat" fontSize={16}>
             В случае отказа от рaбот клиент оплачивает выезд мастера - 900P
           </Typography>
-        </Stack>
+        </Stack> */}
 
-        <Stack gap="10px">
-          <Typography color="#fff" fontFamily="Montserrat" fontSize={16}>
+        <Stack gap="10px" direction="row" alignItems="center">
+          <Typography color="#0D99FF" fontFamily="Montserrat" fontSize={16}>
             Принимаем оплату любым удобным для вас способом
           </Typography>
           <Stack alignItems="end">

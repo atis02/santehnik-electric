@@ -23,6 +23,7 @@ import Ratings from "./Pages/Ratings";
 import Navbar from "./Components/Navbar/Navbar";
 
 import { Suspense, useEffect, useState } from "react";
+import QuestionAnswer from "./Pages/Accordion/Accordion";
 function App() {
   const [loader, setLoader] = useState(false);
   AOS.init({
@@ -145,7 +146,7 @@ function App() {
         <Suspense fallback={<CircularProgress />}>
           <Box
             sx={{
-              background: "#121212",
+              background: "#fff",
             }}
             // sx={{
             //   backgroundImage: "url('/images/bg.jpg')",
@@ -176,9 +177,10 @@ function App() {
               {/* <Services /> */}
               {/* <Models /> */}
               <OutWorksVideo />
+              <QuestionAnswer />
               <Licence />
               <About />
-              {/* <Ratings /> */}
+              <Ratings />
 
               <Footer />
             </Box>

@@ -78,10 +78,10 @@ const Navbar = () => {
       sx={{
         ...(scrolled
           ? {
-              boxShadow: "0px 5px 5px 0px rgba(0,0,0,0.75)",
+              boxShadow: "0px 5px 10px 0px rgba(0,0,0,0.75)",
               backdropFilter: "blur(10px)",
               opacity: "95%",
-              backgroundColor: "#1E1E1E",
+              backgroundColor: "#fff",
             }
           : {
               boxShadow: "0",
@@ -97,15 +97,13 @@ const Navbar = () => {
         top={0}
         zIndex="1000"
         backgroundColor="transparent"
-        p={{
-          lg: "3px 85px 7px 85px",
-          md: "5px 70px 0 70px",
-          xs: "4px 20px 10px 20px",
-        }}
+        // p={{
+        //   lg: "3px 85px 7px 85px",
+        //   md: "5px 70px 0 70px",
+        //   xs: "4px 20px 10px 20px",
+        // }}
       >
         <Stack
-          // width={{ lg: 70, md: 80, sm: 70, xs: 55 }}
-          // height={{ lg: 80, md: 75, sm: 70, xs: 55 }}
           maxWidth="88%"
           sx={{
             display: { lg: "none", md: "none", sm: "flex", xs: "flex" },
@@ -129,7 +127,7 @@ const Navbar = () => {
           /> */}
             <img
               src="/images/logo (3).png"
-              style={{ width: 270, height: 120, pt: 5 }}
+              style={{ width: 160, height: 70, pt: 5 }}
               alt="LOGO"
             />
             {/* <Typography
@@ -156,20 +154,20 @@ const Navbar = () => {
             fontFamily="Roboto"
             fontWeight={300}
             fontSize={12}
-            color="#fff"
+            color="#0D99FF"
             width="80%"
             lineHeight="17px"
-            mt={-3}
-            ml={7}
+            mt={-2}
+            ml={5}
           >
             УСЛУГИ САНТЕХНИКА В САНКТ - ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ{" "}
           </Typography>
           <span
             style={{
               fontFamily: "Montserrat",
-              color: "#fff",
+              color: "#0D99FF",
               fontSize: 10,
-              marginLeft: 56,
+              marginLeft: 40,
             }}
           >
             Мы работаем с 09:00-22:00
@@ -185,139 +183,62 @@ const Navbar = () => {
           justifyContent="space-between"
         >
           <Stack
-            // width={{ lg: 70, md: 80, sm: 70, xs: 55 }}
-            // height={{ lg: 80, md: 75, sm: 70, xs: 55 }}
-            width="18%"
+            // width="18%"
             direction="column"
-            // alignItems="center"
           >
             <a
               href="/"
               style={{
                 textDecoration: "none",
                 display: "flex",
-                // alignItems: "center",
-                // gap: 2,
                 fontSize: 34,
                 fontFamily: "Impact",
                 // marginLeft: 60,
               }}
             >
-              {/* <img
-            src="/images/ReModel.jpg"
-            style={{ width: "100%", height: "100%", pt: 5 }}
-            alt="LOGO"
-          /> */}
               <img
                 src="/images/logo (3).png"
                 style={{ width: 160, height: 80, pt: 5 }}
                 alt="LOGO"
               />
-              {/* <Typography
-                color="#0D99FF"
-                fontFamily="Impact"
-                fontSize={34}
-                fontWeight={400}
-                lineHeight="44px"
-              >
-                Сантехник &{" "}
-              </Typography>
-              <span
-                style={{
-                  color: "#FFD700",
-                  fontWeight: 400,
-                  lineHeight: "44px",
-                }}
-              >
-                {" "}
-                Электрик
-              </span> */}
             </a>
-            {/* <Typography
-              fontFamily="Roboto"
-              fontWeight={300}
-              fontSize={14}
-              color="#fff"
-              width="90%"
-              lineHeight="17px"
-            >
-              УСЛУГИ САНТЕХНИКА В САНКТ - ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ{" "}
-            </Typography> */}
           </Stack>
 
-          <Stack direction="column" width="22%">
+          <Stack direction="column">
             <Typography
               fontSize={16}
               textTransform="uppercase"
               fontFamily="Roboto"
-              color="#fff"
+              fontWeight="600"
+              color="#0D99FF"
             >
-              ВЫЗОВ САНТЕХНИКА и Электрика
-              <span
-                style={{
-                  color: "#FFD700",
-                  fontSize: 16,
-                  fontWeight: 600,
-                  lineHeight: "16px",
-                  fontFamily: "Roboto",
-                  textTransform: "uppercase",
-                  marginLeft: 5,
-                }}
-              >
-                В ЛЮБОЙ
-              </span>
-              <span
-                style={{
-                  color: "#0D99FF",
-                  fontSize: 16,
-                  fontWeight: 600,
-                  lineHeight: "16px",
-                  fontFamily: "Roboto",
-                  textTransform: "uppercase",
-                  marginLeft: 5,
-                }}
-              >
-                РАЙОН
-              </span>
+              ВЫЗОВ САНТЕХНИКА
             </Typography>
-            {/* <Stack direction="row" spacing={1}>
-          <span
-            style={{
-              color: "#FFD700",
-              fontSize: 16,
-              fontWeight: 600,
-              lineHeight: "16px",
-              fontFamily: "Roboto",
-              textTransform: "uppercase",
-            }}
-          >
-            В ЛЮБОЙ
-          </span>
-          <span
-            style={{
-              color: "#0D99FF",
-              fontSize: 16,
-              fontWeight: 600,
-              lineHeight: "16px",
-              fontFamily: "Roboto",
-              textTransform: "uppercase",
-            }}
-          >
-            РАЙОН
-          </span>
-        </Stack> */}
+            <span
+              style={{
+                color: "#FFD700",
+                fontSize: 16,
+                fontWeight: 600,
+                lineHeight: "16px",
+                fontFamily: "Roboto",
+                textTransform: "uppercase",
+                marginLeft: 5,
+              }}
+            >
+              В ЛЮБОЙ РАЙОН
+            </span>
           </Stack>
 
-          <Stack direction="column" width="18%">
+          <Stack direction="column">
             <Typography
               fontSize={16}
               textTransform="uppercase"
               fontFamily="Roboto"
-              color="#fff"
+              color="#0D99FF"
+              fontWeight={600}
             >
               Сантехник на дом
             </Typography>
-
             <span
               style={{
                 color: "#FFD700",
@@ -332,12 +253,13 @@ const Navbar = () => {
             </span>
           </Stack>
 
-          <Stack direction="column" width="18%">
+          <Stack direction="column" maxWidth="25%">
             <Typography
               fontSize={16}
+              fontWeight={600}
               textTransform="uppercase"
               fontFamily="Roboto"
-              color="#fff"
+              color="#0D99FF"
             >
               УСЛУГИ САНТЕХНИКА В
             </Typography>
@@ -355,13 +277,13 @@ const Navbar = () => {
             </span>
           </Stack>
 
-          <Stack direction="column" width="17%">
+          <Stack direction="column">
             <a
               style={{
                 fontWeight: 600,
                 fontFamily: "Roboto",
                 fontSize: 24,
-                color: "#fff",
+                color: "#0D99FF",
                 lineHeight: "28px",
                 textDecoration: "none",
               }}
@@ -398,9 +320,10 @@ const Navbar = () => {
               width: 24,
               height: 24,
               p: 0,
+              pr: 2,
             }}
           >
-            <MenuIcon sx={{ color: "#fff" }} />
+            <MenuIcon sx={{ color: "#0D99FF" }} />
           </IconButton>
 
           {/* <Language /> */}
@@ -433,7 +356,7 @@ const Navbar = () => {
               height="35px"
               alignItems="center"
             >
-              <Button sx={{ color: "#fff" }} onClick={toggleMobileMenu}>
+              <Button sx={{ color: "#0D99FF" }} onClick={toggleMobileMenu}>
                 <svg
                   fillRule="evenodd"
                   viewBox="64 64 896 896"
@@ -441,7 +364,7 @@ const Navbar = () => {
                   data-icon="close"
                   width="1em"
                   height="1em"
-                  fill="currentColor"
+                  fill="#0D99FF"
                   aria-hidden="true"
                 >
                   <path d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z"></path>

@@ -43,7 +43,7 @@ const About = () => {
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            opacity: 0.1,
+            opacity: 0.25,
           }}
           alt=""
         />
@@ -82,13 +82,13 @@ const About = () => {
             fontWeight="400"
             fontSize={{ lg: 45, md: 40, sm: 35, xs: 25 }}
             fontFamily="Impact"
-            color="#fff"
+            color="#0D99FF"
             letterSpacing="0.5px"
             lineHeight={{ lg: "45px", md: "35px", sm: "30px", xs: "30px" }}
           >
             Оставьте заявку и мы устраним неисправность уже сегодня!
           </Typography>
-          <Typography fontFamily="Montserrat" fontSize={14} color="#fff">
+          <Typography fontFamily="Montserrat" fontSize={14} color="#0D99FF">
             Перезвоним в течение минуты
           </Typography>
         </Stack>
@@ -98,13 +98,13 @@ const About = () => {
           spacing={1}
         >
           <RussianPhoneField />
-          <Typography fontFamily="Montserrat" fontSize={14} color="#fff">
+          <Typography fontFamily="Montserrat" fontSize={14} color="#0D99FF">
             Нажимая, я принимаю условия{" "}
             <a
               href="/agreement.docx"
               download="/agreement.docx"
               style={{
-                color: "#0E93F4",
+                color: "#000",
                 fontFamily: "Montserrat",
               }}
             >
@@ -116,7 +116,7 @@ const About = () => {
               href="/policy.docx"
               download="/agreement.docx"
               style={{
-                color: "#0E93F4",
+                color: "#000",
                 fontFamily: "Montserrat",
                 marginLeft: 10,
               }}

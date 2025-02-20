@@ -31,7 +31,7 @@ const Home = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const dataMainPage = [
-    { title: "Полный спектр услуг сантехника и электрика" },
+    { title: "Доступные цены" },
     {
       title:
         "15% скидка пенсионерам , многодетным , ветераном ВОВ, участникам СВО ",
@@ -41,6 +41,8 @@ const Home = () => {
         "Сантехники и Электрики сертифицированные с опытом работы более 10 лет",
     },
     { title: "Гарантия на выполненные работы" },
+    { title: "Приезд в течении часа" },
+
     // { title: "Мы работаем с 09:00-22:00" },
   ];
 
@@ -95,7 +97,7 @@ const Home = () => {
               data-aos-once="true"
               width="90%"
               fontWeight="600"
-              fontSize={{ lg: 40, md: 40, sm: 35, xs: 25 }}
+              fontSize={{ lg: 38, md: 40, sm: 35, xs: 25 }}
               className="title"
               fontFamily="Montserrat"
               letterSpacing="0.5px"
@@ -103,7 +105,7 @@ const Home = () => {
             >
               {isMobile
                 ? "Вызвать Cантехника и Электрика в Санкт-Петербурге"
-                : "Профессиональные услуги Сантехника и Электрика в Санкт-Петербурге "}
+                : "Сантехник Питер - Ваш надежный сантехнический партнер в Санкт-Петербурге!"}
             </Typography>
 
             {/* <Divider
@@ -336,9 +338,9 @@ const Home = () => {
               direction="row"
               alignItems="center"
               spacing={{ lg: 3, md: 3, sm: 3, xs: 1 }}
-              border="1px solid #336699"
+              border="1px solid #0D99FF"
               width={{ lg: "40%", md: "40%", sm: "80%", xs: "100%" }}
-              bgcolor="#104871"
+              bgcolor="#0D99FF"
               position="relative"
               height={{ lg: 50, md: 40, sm: 30, xs: 45 }}
               boxShadow="0px 4px 8px 0px #0D99FF"
@@ -352,9 +354,9 @@ const Home = () => {
                   width: { lg: 60, md: 60, sm: 50, xs: 40 },
                   alignItems: "center",
                   justifyContent: "center",
-                  border: "5px solid #336699",
+                  border: "3px solid #336699",
                   transform: "rotate(45deg)",
-                  bgcolor: "#104871",
+                  bgcolor: "#0D99FF",
                   position: "absolute",
                   left: { lg: -40, md: -40, sm: -30, xs: -20 },
                 }}
