@@ -90,7 +90,7 @@ const RussianPhoneField = () => {
           helperText={
             error
               ? "Номер должен начинаться с 7 или 8 и содержать 11 цифр."
-              : "Формат: 7XXXXXXXXXX или 8XXXXXXXXXX"
+              : ""
           }
           InputProps={{
             inputMode: "tel",
@@ -130,7 +130,7 @@ const RussianPhoneField = () => {
             bgcolor: "#0D92F3",
             color: "#fff",
             fontFamily: "Montserrat",
-            mb: 3,
+            // mb: 3,
             fontWeight: 400,
             fontSize: { lg: 16, md: 16, sm: 14, xs: 12 },
             "&:hover": {

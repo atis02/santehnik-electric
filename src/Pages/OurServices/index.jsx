@@ -69,7 +69,7 @@ const index = () => {
     {
       title: "Устранение засоров",
       img: "/images2/zasor.jpg",
-      price: "от 780",
+      price: "от 780 руб",
     },
     //
     {
@@ -104,12 +104,12 @@ const index = () => {
     //
     {
       title: "Установка и ремонт душевой кабины",
-      img: "/images/image 30-8.png",
+      img: "/images2/dush.jpg",
       price: "от 1100 руб",
     },
 
     {
-      title: "Родиатор",
+      title: "Рaдиатор",
       img: "/images2/rodiator.jpg",
       price: "от 1200 руб",
     },
@@ -123,6 +123,16 @@ const index = () => {
       title: "Установка и ремонт коллекторной системы",
       img: "/images2/kollektor.jpg",
       price: "от 1690 руб",
+    },
+    {
+      title: "Установка счетчиков учета воды",
+      img: "/images2/scetcik.jpg",
+      price: "от 1100 руб",
+    },
+    {
+      title: "Установка и ремонт душевого уголка",
+      img: "/images2/ugol.jpg",
+      price: "от 900 руб",
     },
   ];
   return (

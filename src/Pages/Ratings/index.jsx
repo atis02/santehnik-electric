@@ -160,7 +160,7 @@ const RatingsSwiper = () => {
       {/* Swiper to display ratings */}
       <Swiper
         spaceBetween={15}
-        slidesPerView={isMobile ? 1 : 3.5}
+        slidesPerView={isMobile ? 1.2 : 3.5}
         pagination={{ clickable: true }}
         style={{ overflow: "hidden" }}
         className="otzyw"

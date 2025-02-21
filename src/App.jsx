@@ -24,6 +24,7 @@ import Navbar from "./Components/Navbar/Navbar";
 
 import { Suspense, useEffect, useState } from "react";
 import QuestionAnswer from "./Pages/Accordion/Accordion";
+import Call from "./Components/utils/Call";
 function App() {
   const [loader, setLoader] = useState(false);
   AOS.init({
@@ -148,40 +149,18 @@ function App() {
             sx={{
               background: "#fff",
             }}
-            // sx={{
-            //   backgroundImage: "url('/images/bg.jpg')",
-            //   backgroundRepeat: "no-repeat",
-            //   backgroundSize: "contain",
-            // }}
           >
-            <Box
-            // sx={{
-            //   backgroundImage: "url('/images/AllHeight.png')",
-            //   backgroundRepeat: "no-repeat",
-            //   backgroundSize: "contain",
-            // }}
-            >
+            <Box>
+              <Call />
               <Navbar />
-              {/* <Stack className="videoContainer">
-                <video autoPlay loop muted className="video">
-                  <source src="/public/ModelBg.mp4" type="video/mp4" />
-                </video>
-              </Stack> */}
-
               <Home />
               <AboutCompany />
-
               <OurServices />
-              {/* <Advantages /> */}
-              {/* <Missions /> */}
-              {/* <Services /> */}
-              {/* <Models /> */}
               <OutWorksVideo />
               <QuestionAnswer />
               <Licence />
               <About />
               <Ratings />
-
               <Footer />
             </Box>
           </Box>

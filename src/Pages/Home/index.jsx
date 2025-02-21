@@ -41,7 +41,7 @@ const Home = () => {
         "Сантехники и Электрики сертифицированные с опытом работы более 10 лет",
     },
     { title: "Гарантия на выполненные работы" },
-    { title: "Приезд в течении часа" },
+    { title: "Выезд в течении часа" },
 
     // { title: "Мы работаем с 09:00-22:00" },
   ];
@@ -81,31 +81,31 @@ const Home = () => {
           color="#fff"
           width={{ lg: "90%", md: "95%", xs: "100%" }}
           pb={{ lg: 0, md: 0, xs: 1 }}
-          mt={10}
+          mt={20}
         >
           <Stack
             direction="row"
             alignItems="center"
             spacing={2}
             width={{ lg: "95%", md: "80%", sm: "70%", xs: "100%" }}
-            height={35}
-            pb={{ lg: "25px", md: "23px", sm: "18px", xs: "15px" }}
+            height={105}
+            pb={{ lg: "60px", md: "23px", sm: "18px", xs: "0px" }}
           >
             <Typography
               data-aos="fade-up"
               data-aos-delay="100"
               data-aos-once="true"
-              width="90%"
+              width="100%"
               fontWeight="600"
-              fontSize={{ lg: 38, md: 40, sm: 35, xs: 25 }}
+              fontSize={{ lg: 38, md: 40, sm: 35, xs: 20 }}
               className="title"
               fontFamily="Montserrat"
               letterSpacing="0.5px"
               lineHeight={{ lg: "45px", md: "35px", sm: "30px", xs: "30px" }}
+              mt={{ lg: 0, md: 0, sm: 0, xs: 15 }}
             >
-              {isMobile
-                ? "Вызвать Cантехника и Электрика в Санкт-Петербурге"
-                : "Сантехник Питер - Ваш надежный сантехнический партнер в Санкт-Петербурге!"}
+              Сантехник Питер - Ваш надежный сантехнический партнер в{" "}
+              Санкт-Петербурге!
             </Typography>
 
             {/* <Divider
@@ -124,7 +124,7 @@ const Home = () => {
               Сантехник & Электрик
             </Typography> */}
           </Stack>
-          <Stack width="100%">
+          {/* <Stack width="100%">
             <Typography
               fontSize={{ lg: 17, md: 16, sm: 15, xs: 12 }}
               width="80%"
@@ -138,7 +138,7 @@ const Home = () => {
               Профессиональные услуги сантехников и электриков для дома , офиса
               или коммерческих объектов.
             </Typography>
-          </Stack>
+          </Stack> */}
           <Toaster />
           <Stack
             direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
@@ -192,17 +192,17 @@ const Home = () => {
           </Stack>
         </Stack>
         <Stack
-          width={{ lg: "80%", md: "100%", sm: "100%", xs: "60%" }}
+          width={{ lg: "80%", md: "100%", sm: "100%", xs: "100%" }}
           // maxHeight={{ lg: "70%", md: "70%", sm: "60%", xs: "60%" }}
           maxHeight={200}
-          sx={{
-            ...(isMobile ? { display: "none" } : ""),
-          }}
+          // sx={{
+          //   ...(isMobile ? { display: "none" } : ""),
+          // }}
           direction="row"
           justifyContent="space-between"
           alignItems="start"
           pt={4}
-          gap="30px"
+          gap={{ lg: "30px", xs: "10px" }}
           flexWrap="wrap"
         >
           {/* <img
@@ -219,21 +219,30 @@ const Home = () => {
             direction="row"
             alignItems="center"
             spacing={1}
-            maxHeight={80}
-            minWidth="47%"
-            p="20px"
+            maxHeight={{ lg: 80, md: 80, xs: 40 }}
+            width={{ lg: "47%", md: "65%", sm: "65%", xs: "100%" }}
+            p={{ lg: "20px", xs: "5px" }}
             boxShadow="0px 0px 10px 0px #0D99FF"
             data-aos="fade-up"
             data-aos-delay="100"
             data-aos-once="true"
           >
-            <img
-              src="/images/image 8.png"
-              style={{ width: 40, height: 40 }}
-              alt=""
-            />
-            <Typography color="#0D99FF" fontSize={18} fontWeight={600}>
-              Приезд в течении часа
+            <Stack
+              height={{ lg: 40, md: 40, sm: 40, xs: 20 }}
+              width={{ lg: 40, md: 40, sm: 40, xs: 20 }}
+            >
+              <img
+                src="/images/image 8.png"
+                style={{ width: "100%", height: "100%" }}
+                alt=""
+              />
+            </Stack>
+            <Typography
+              color="#0D99FF"
+              fontSize={{ lg: 18, md: 18, sm: 16, xs: 14 }}
+              fontWeight={600}
+            >
+              Выезд в течении часа
             </Typography>
           </Stack>
           <Stack
@@ -241,47 +250,68 @@ const Home = () => {
             direction="row"
             alignItems="center"
             spacing={1}
-            maxHeight={80}
-            minWidth="47%"
-            p="20px"
+            maxHeight={{ lg: 80, md: 80, xs: 40 }}
+            width={{ lg: "47%", md: "65%", sm: "65%", xs: "100%" }}
+            p={{ lg: "20px", xs: "5px" }}
             boxShadow="0px 0px 10px 0px #0D99FF"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-once="true"
           >
-            <img
-              src="/images/image 9.png"
-              style={{ width: 40, height: 40 }}
-              alt=""
-            />
-            <Typography color="#0D99FF" fontSize={18} fontWeight={600}>
+            <Stack
+              height={{ lg: 40, md: 40, sm: 40, xs: 20 }}
+              width={{ lg: 40, md: 40, sm: 40, xs: 20 }}
+            >
+              <img
+                src="/images/image 9.png"
+                style={{ width: "100%", height: "100%" }}
+                alt=""
+              />
+            </Stack>
+            <Typography
+              color="#0D99FF"
+              fontSize={{ lg: 18, md: 18, sm: 16, xs: 14 }}
+              fontWeight={600}
+            >
               Чистота после работы
             </Typography>
           </Stack>
           <Stack
-            direction="row"
+            direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
             justifyContent="space-between"
             alignItems="center"
+            gap={{ lg: 0, xs: 2 }}
+            width="100%"
           >
             <Stack
               border="2px solid #0D99FF"
               direction="row"
               alignItems="center"
               spacing={1}
-              maxHeight={80}
-              width="65%"
-              p="20px"
+              maxHeight={{ lg: 80, md: 80, xs: 40 }}
+              width={{ lg: "65%", md: "65%", sm: "65%", xs: "100%" }}
+              p={{ lg: "20px", xs: "5px" }}
               boxShadow="0px 0px 10px 0px #0D99FF"
               data-aos="fade-up"
               data-aos-delay="300"
               data-aos-once="true"
             >
-              <img
-                src="/images/image 10.png"
-                style={{ width: 40, height: 40 }}
-                alt=""
-              />
-              <Typography color="#0D99FF" fontSize={18} fontWeight={600}>
+              <Stack
+                height={{ lg: 40, md: 40, sm: 40, xs: 20 }}
+                width={{ lg: 60, md: 40, sm: 40, xs: 20 }}
+              >
+                <img
+                  src="/images/image 10.png"
+                  style={{ width: "100%", height: "100%" }}
+                  alt=""
+                />
+              </Stack>
+
+              <Typography
+                color="#0D99FF"
+                fontSize={{ lg: 18, md: 18, sm: 16, xs: 14 }}
+                fontWeight={600}
+              >
                 Низкие цены - найдете дешевле? Договоримся!
               </Typography>
             </Stack>
@@ -290,19 +320,29 @@ const Home = () => {
               direction="row"
               alignItems="center"
               spacing={1}
-              maxHeight={80}
-              width="30%"
-              p="20px"
+              maxHeight={{ lg: 80, md: 80, xs: 40 }}
+              width={{ lg: "30%", md: "65%", sm: "65%", xs: "100%" }}
+              p={{ lg: "20px", xs: "5px" }}
               boxShadow="0px 0px 10px 0px #0D99FF"
               data-aos="fade-up"
               data-aos-delay="300"
               data-aos-once="true"
             >
-              <img
+              <Stack
+                height={{ lg: 80, md: 60, sm: 60, xs: 40 }}
+                width={{ lg: 60, md: 40, sm: 40, xs: 20 }}
+              >
+                <img
+                  src="/images/working-time.svg"
+                  style={{ width: "100%", height: "100%" }}
+                  alt=""
+                />
+              </Stack>
+              {/* <img
                 src="/images/working-time.svg"
                 style={{ width: 40, height: 60 }}
                 alt=""
-              />
+              /> */}
               <Typography color="#0D99FF" fontSize={14} fontWeight={600}>
                 Мы работаем с 09:00-22:00
               </Typography>
@@ -323,7 +363,7 @@ const Home = () => {
         >
           {/* {t("advantages")}
            */}
-          Преимущества нашей службы
+          Наши преимущества
         </Typography>
         <Stack
           direction="row"

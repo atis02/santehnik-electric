@@ -97,60 +97,79 @@ const Navbar = () => {
         top={0}
         zIndex="1000"
         backgroundColor="transparent"
+        width="100%"
         // p={{
         //   lg: "3px 85px 7px 85px",
         //   md: "5px 70px 0 70px",
         //   xs: "4px 20px 10px 20px",
         // }}
       >
-        <Stack
-          maxWidth="88%"
-          sx={{
-            display: { lg: "none", md: "none", sm: "flex", xs: "flex" },
-          }}
-        >
-          <a
-            href="/"
-            style={{
-              textDecoration: "none",
-              display: "flex",
-              alignItems: "center",
-              gap: 2,
-              fontSize: 18,
-              fontFamily: "Impact",
-            }}
+        {isMobile && (
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="space-between"
+            width="100%"
+            p="0 10px"
           >
-            {/* <img
-            src="/images/ReModel.jpg"
-            style={{ width: "100%", height: "100%", pt: 5 }}
-            alt="LOGO"
-          /> */}
-            <img
-              src="/images/logo (3).png"
-              style={{ width: 160, height: 70, pt: 5 }}
-              alt="LOGO"
-            />
-            {/* <Typography
+            <Stack>
+              <a
+                href="/"
+                style={{
+                  textDecoration: "none",
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  // gap: 2,
+                  fontSize: 16,
+                  fontFamily: "Impact",
+                }}
+              >
+                <img
+                  src="/images/logoSantehnik.png"
+                  style={{ width: 60, height: 30, pt: 5 }}
+                  alt="LOGO"
+                />
+
+                <Typography
+                  color="#0D99FF"
+                  fontFamily="Impact"
+                  fontSize={12}
+                  fontWeight={200}
+                  lineHeight="44px"
+                  mt={-1.5}
+                >
+                  Сантехник Питер
+                </Typography>
+              </a>
+            </Stack>
+            <Typography
               color="#0D99FF"
               fontFamily="Impact"
-              fontSize={18}
-              fontWeight={400}
+              fontSize={22}
+              fontWeight={200}
               lineHeight="44px"
+              ml={-2}
             >
-              Сантехник &{" "}
+              8 (800) 234-12-82
             </Typography>
-            <span
-              style={{
-                color: "#FFD700",
-                fontWeight: 400,
-                lineHeight: "44px",
-              }}
-            >
-              {" "}
-              Электрик
-            </span> */}
-          </a>
-          <Typography
+            <Stack>
+              <IconButton
+                onClick={toggleMobileMenu}
+                sx={{
+                  width: 24,
+                  height: 24,
+                  p: 0,
+                  pr: 2,
+                }}
+              >
+                <MenuIcon sx={{ color: "#0D99FF" }} />
+              </IconButton>
+            </Stack>
+          </Stack>
+        )}
+
+        {/* <Typography
             fontFamily="Roboto"
             fontWeight={300}
             fontSize={12}
@@ -161,32 +180,49 @@ const Navbar = () => {
             ml={5}
           >
             УСЛУГИ САНТЕХНИКА В САНКТ - ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ{" "}
-          </Typography>
-          <span
-            style={{
-              fontFamily: "Montserrat",
-              color: "#0D99FF",
-              fontSize: 10,
-              marginLeft: 40,
-            }}
-          >
-            Мы работаем с 09:00-22:00
-          </span>
-        </Stack>
-
-        <Stack
-          direction="row"
-          alignItems="center"
-          sx={{
-            display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
-          }}
-          justifyContent="space-between"
-        >
+          </Typography> */}
+        {!isMobile && (
           <Stack
-            // width="18%"
-            direction="column"
+            direction="row"
+            alignItems="center"
+            width="100%"
+            p="0 90px"
+            justifyContent="space-between"
+            // spacing={8}
           >
-            <a
+            <Stack
+              // width="18%"
+              direction="column"
+            >
+              <a
+                href="/"
+                style={{
+                  textDecoration: "none",
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  // gap: 2,
+                  fontSize: 16,
+                  fontFamily: "Impact",
+                }}
+              >
+                <img
+                  src="/images/logoSantehnik.png"
+                  style={{ width: 160, height: 60, pt: 5 }}
+                  alt="LOGO"
+                />
+                <Typography
+                  color="#0D99FF"
+                  fontFamily="Impact"
+                  fontSize={20}
+                  fontWeight={400}
+                  lineHeight="44px"
+                  mt={-1}
+                >
+                  Сантехник - Питер
+                </Typography>
+              </a>
+              {/* <a
               href="/"
               style={{
                 textDecoration: "none",
@@ -201,133 +237,99 @@ const Navbar = () => {
                 style={{ width: 160, height: 80, pt: 5 }}
                 alt="LOGO"
               />
-            </a>
+            </a> */}
+            </Stack>
+
+            <Stack direction="column">
+              <Typography
+                fontSize={16}
+                textTransform="uppercase"
+                fontFamily="Roboto"
+                fontWeight="600"
+                color="#0D99FF"
+              >
+                ВЫЗОВ САНТЕХНИКА
+              </Typography>
+              <span
+                style={{
+                  color: "#FFD700",
+                  fontSize: 16,
+                  fontWeight: 600,
+                  lineHeight: "16px",
+                  fontFamily: "Roboto",
+                  textTransform: "uppercase",
+                  marginLeft: 5,
+                }}
+              >
+                В ЛЮБОЙ РАЙОН
+              </span>
+            </Stack>
+
+            <Stack direction="column">
+              <Typography
+                fontSize={16}
+                textTransform="uppercase"
+                fontFamily="Roboto"
+                color="#0D99FF"
+                fontWeight={600}
+              >
+                Сантехник на дом
+              </Typography>
+              <span
+                style={{
+                  color: "#FFD700",
+                  fontSize: 16,
+                  fontWeight: 600,
+                  lineHeight: "16px",
+                  fontFamily: "Roboto",
+                  textTransform: "uppercase",
+                }}
+              >
+                дешево и быстро
+              </span>
+            </Stack>
+
+            <Stack direction="column" maxWidth="25%">
+              <Typography
+                fontSize={16}
+                fontWeight={600}
+                textTransform="uppercase"
+                fontFamily="Roboto"
+                color="#0D99FF"
+              >
+                УСЛУГИ САНТЕХНИКА В
+              </Typography>
+              <span
+                style={{
+                  color: "#FFD700",
+                  fontSize: 16,
+                  fontWeight: 600,
+                  lineHeight: "16px",
+                  fontFamily: "Roboto",
+                  textTransform: "uppercase",
+                }}
+              >
+                САНКТ - ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ
+              </span>
+            </Stack>
+
+            <Stack direction="column">
+              <a
+                style={{
+                  fontWeight: 600,
+                  fontFamily: "Roboto",
+                  fontSize: 28,
+                  color: "#0D99FF",
+                  lineHeight: "28px",
+                  textDecoration: "none",
+                }}
+                href="tel:8 (800) 234-12-82"
+              >
+                8 (800) 234-12-82
+              </a>
+            </Stack>
           </Stack>
-
-          <Stack direction="column">
-            <Typography
-              fontSize={16}
-              textTransform="uppercase"
-              fontFamily="Roboto"
-              fontWeight="600"
-              color="#0D99FF"
-            >
-              ВЫЗОВ САНТЕХНИКА
-            </Typography>
-            <span
-              style={{
-                color: "#FFD700",
-                fontSize: 16,
-                fontWeight: 600,
-                lineHeight: "16px",
-                fontFamily: "Roboto",
-                textTransform: "uppercase",
-                marginLeft: 5,
-              }}
-            >
-              В ЛЮБОЙ РАЙОН
-            </span>
-          </Stack>
-
-          <Stack direction="column">
-            <Typography
-              fontSize={16}
-              textTransform="uppercase"
-              fontFamily="Roboto"
-              color="#0D99FF"
-              fontWeight={600}
-            >
-              Сантехник на дом
-            </Typography>
-            <span
-              style={{
-                color: "#FFD700",
-                fontSize: 16,
-                fontWeight: 600,
-                lineHeight: "16px",
-                fontFamily: "Roboto",
-                textTransform: "uppercase",
-              }}
-            >
-              дешево и быстро
-            </span>
-          </Stack>
-
-          <Stack direction="column" maxWidth="25%">
-            <Typography
-              fontSize={16}
-              fontWeight={600}
-              textTransform="uppercase"
-              fontFamily="Roboto"
-              color="#0D99FF"
-            >
-              УСЛУГИ САНТЕХНИКА В
-            </Typography>
-            <span
-              style={{
-                color: "#FFD700",
-                fontSize: 16,
-                fontWeight: 600,
-                lineHeight: "16px",
-                fontFamily: "Roboto",
-                textTransform: "uppercase",
-              }}
-            >
-              САНКТ - ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ{" "}
-            </span>
-          </Stack>
-
-          <Stack direction="column">
-            <a
-              style={{
-                fontWeight: 600,
-                fontFamily: "Roboto",
-                fontSize: 24,
-                color: "#0D99FF",
-                lineHeight: "28px",
-                textDecoration: "none",
-              }}
-              href="tel:8 (800) 234-12-82"
-            >
-              8 (800) 234-12-82
-            </a>
-            <span
-              style={{
-                color: "#FFD700",
-                fontSize: 13,
-                fontWeight: 600,
-                lineHeight: "16px",
-                fontFamily: "Roboto",
-                textTransform: "uppercase",
-                // textAlign: "center",
-              }}
-            >
-              Заказать обратный звонок
-            </span>
-          </Stack>
-        </Stack>
-
-        <Stack
-          direction="row"
-          spacing={1}
-          alignItems="center"
-          justifyContent="center"
-          sx={{ ...(isMobile ? { display: "flex" } : { display: "none" }) }}
-        >
-          <IconButton
-            onClick={toggleMobileMenu}
-            sx={{
-              width: 24,
-              height: 24,
-              p: 0,
-              pr: 2,
-            }}
-          >
-            <MenuIcon sx={{ color: "#0D99FF" }} />
-          </IconButton>
-
-          {/* <Language /> */}
-        </Stack>
+        )}
 
         <Drawer
           anchor="right"
