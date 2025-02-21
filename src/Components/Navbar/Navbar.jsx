@@ -135,7 +135,7 @@ const Navbar = () => {
                   color="#0D99FF"
                   fontFamily="Impact"
                   fontSize={12}
-                  fontWeight={200}
+                  fontWeight={600}
                   lineHeight="44px"
                   mt={-1.5}
                 >
@@ -147,11 +147,20 @@ const Navbar = () => {
               color="#0D99FF"
               fontFamily="Impact"
               fontSize={22}
-              fontWeight={200}
+              fontWeight={600}
               lineHeight="44px"
               ml={-2}
             >
-              8 (800) 234-12-82
+              <a
+                style={{
+                  fontWeight: 600,
+                  color: "#0D99FF",
+                  textDecoration: "none",
+                }}
+                href="tel:8 (800) 234-12-82"
+              >
+                8 (800) 234-12-82
+              </a>
             </Typography>
             <Stack>
               <IconButton

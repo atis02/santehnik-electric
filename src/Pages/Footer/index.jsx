@@ -323,8 +323,7 @@ const Footer = () => {
           fontWeight={500}
           p={1}
         >
-          Copyright © {new Date().getFullYear()} САНТЕХНИК И ЭЛЕКТРИК | Powered
-          by{" "}
+          Copyright © {new Date().getFullYear()} САНТЕХНИК | Powered by{" "}
           <a
             href="https://github.com/atis02"
             style={{
