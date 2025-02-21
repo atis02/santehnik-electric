@@ -136,8 +136,9 @@ const Footer = () => {
                 // width={{ lg: 70, md: 80, sm: 70, xs: 55 }}
                 // height={{ lg: 80, md: 75, sm: 70, xs: 55 }}
                 maxWidth={{ lg: "48%", md: "48%", sm: "48%", xs: "95%" }}
+                alignItems="start"
               >
-                <a
+                {/* <a
                   href="/"
                   style={{
                     textDecoration: "none",
@@ -153,25 +154,36 @@ const Footer = () => {
                     style={{ width: 270, height: 120, pt: 5 }}
                     alt="LOGO"
                   />
-                  {/* <Typography
+                 
+                </a> */}
+                <a
+                  href="/"
+                  style={{
+                    textDecoration: "none",
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column",
+                    // gap: 2,
+                    fontSize: 16,
+                    fontFamily: "Impact",
+                  }}
+                >
+                  <img
+                    src="/images/logoSantehnik.png"
+                    style={{ width: 220, height: 80, pt: 5 }}
+                    alt="LOGO"
+                  />
+
+                  <Typography
                     color="#0D99FF"
                     fontFamily="Impact"
-                    fontSize={{ lg: 34, xs: 28 }}
-                    fontWeight={400}
+                    fontSize={30}
+                    fontWeight={200}
                     lineHeight="44px"
+                    mt={-1}
                   >
-                    Сантехник &{" "}
+                    Сантехник Питер
                   </Typography>
-                  <span
-                    style={{
-                      color: "#FFD700",
-                      fontWeight: 400,
-                      lineHeight: "44px",
-                    }}
-                  >
-                    {" "}
-                    Электрик
-                  </span> */}
                 </a>
                 <Stack>
                   <Typography
@@ -183,8 +195,8 @@ const Footer = () => {
                     lineHeight="17px"
                     textTransform="uppercase"
                   >
-                    УСЛУГИ САНТЕХНИКА и Электрика В САНКТ - ПЕТЕРБУРГЕ И
-                    ЛЕНИНГРАДСКОЙ ОБЛАСТИ{" "}
+                    УСЛУГИ САНТЕХНИКА В САНКТ - ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ
+                    ОБЛАСТИ{" "}
                   </Typography>
                   <Typography
                     fontFamily="Montserrat"
@@ -193,10 +205,10 @@ const Footer = () => {
                     color="#0D99FF"
                     mt={{ lg: 1, xs: 2 }}
                     // width="57%"
-                    width={{ lg: "60%", md: "60%", sm: "60%", xs: "90%" }}
+                    width={{ lg: "90%", md: "60%", sm: "60%", xs: "90%" }}
                     lineHeight="27px"
                   >
-                    © САНТЕХНИК И ЭЛЕКТРИК 2025, Все права защищены
+                    © САНТЕХНИК 2025, Все права защищены
                   </Typography>
                 </Stack>
               </Stack>

@@ -32,7 +32,7 @@ const About = () => {
       pt={{ lg: 0, md: 0, sm: 0, xs: 5 }}
     >
       <Stack
-        height={{ lg: "470px", md: "360px", sm: "300px", xs: "330%" }}
+        height={{ lg: "470px", md: "360px", sm: "300px", xs: "300%" }}
         width="100%"
         position={"absolute"}
         zIndex={1}

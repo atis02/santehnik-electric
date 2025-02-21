@@ -109,7 +109,7 @@ const index = () => {
     },
 
     {
-      title: "Рaдиатор",
+      title: "Установка и ремонт Рaдиатора",
       img: "/images2/rodiator.jpg",
       price: "от 1200 руб",
     },
