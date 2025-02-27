@@ -64,30 +64,30 @@ const Home = () => {
         direction={{
           lg: "row",
           md: "row",
-          sm: "row",
+          sm: "column",
           xs: "column",
         }}
         alignItems="start"
         width="auto"
         // maxHeight="255px"
         justifyContent="center"
-        height={{ lg: "auto", md: "auto", sm: "auto", xs: "60vh" }}
+        height={{ lg: "auto", md: "auto", sm: "60vh", xs: "60vh" }}
         mb={{ lg: 0, md: 0, sm: 0, xs: 20 }}
       >
         <Stack
           alignItems="start"
-          spacing={{ lg: 3, md: 3, sm: 3, xs: 2 }}
+          spacing={{ lg: 3, md: 0, sm: 3, xs: 2 }}
           color="#fff"
-          width={{ lg: "90%", md: "95%", xs: "100%" }}
-          pb={{ lg: 0, md: 0, xs: 1 }}
-          mt={20}
+          width={{ lg: "90%", md: "95%", sm: "90%", xs: "100%" }}
+          pb={{ lg: 0, md: 0, sm: 0, xs: 1 }}
+          mt={{ lg: 20, md: 10, sm: 10, xs: 10 }}
         >
           <Stack
             direction="row"
             alignItems="center"
             spacing={2}
             width={{ lg: "95%", md: "80%", sm: "70%", xs: "100%" }}
-            height={105}
+            height={{ lg: 105, md: 85, sm: 75, xs: 105 }}
             pb={{ lg: "60px", md: "23px", sm: "18px", xs: "0px" }}
           >
             <Typography
@@ -96,7 +96,7 @@ const Home = () => {
               data-aos-once="true"
               width="100%"
               fontWeight="600"
-              fontSize={{ lg: 38, md: 40, sm: 35, xs: 20 }}
+              fontSize={{ lg: 38, md: 34, sm: 30, xs: 20 }}
               className="title"
               fontFamily="Montserrat"
               letterSpacing="0.5px"
@@ -106,42 +106,12 @@ const Home = () => {
               Сантехник Питер - Ваш надежный сантехнический партнер в{" "}
               Санкт-Петербурге!
             </Typography>
-
-            {/* <Divider
-              data-aos-once="true"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              sx={{ width: "1px", height: "95px", background: "#fff" }}
-            />
-            <Typography
-              data-aos="fade-up"
-              data-aos-once="true"
-              fontFamily="Montserrat"
-              data-aos-delay="100"
-              fontSize={16}
-            >
-              Сантехник & Электрик
-            </Typography> */}
           </Stack>
-          {/* <Stack width="100%">
-            <Typography
-              fontSize={{ lg: 17, md: 16, sm: 15, xs: 12 }}
-              width="80%"
-              data-aos-once="true"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              fontFamily="Montserrat"
-              fontWeight={400}
-              mt="30px"
-            >
-              Профессиональные услуги сантехников и электриков для дома , офиса
-              или коммерческих объектов.
-            </Typography>
-          </Stack> */}
+
           <Toaster />
           <Stack
-            direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
-            spacing={{ lg: 34, xs: 2 }}
+            direction={{ lg: "row", md: "column", sm: "column", xs: "column" }}
+            spacing={{ lg: 34, md: 3, sm: 2, xs: 2 }}
           >
             <a
               // href="tel:8 (800) 234-12-82"
@@ -167,6 +137,7 @@ const Home = () => {
               data-aos="fade-up"
               data-aos-once="true"
               data-aos-delay="800"
+              id="CallMaster"
               // onClick={() => setOpen(true)}
             >
               <span className="button-background"></span>

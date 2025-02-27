@@ -195,14 +195,10 @@ const Navbar = () => {
             direction="row"
             alignItems="center"
             width="100%"
-            p="0 90px"
+            p={{ lg: "0 90px", md: "0 70px", sm: "0 30px", xs: "0 20px" }}
             justifyContent="space-between"
-            // spacing={8}
           >
-            <Stack
-              // width="18%"
-              direction="column"
-            >
+            <Stack direction="column">
               <a
                 href="/"
                 style={{
@@ -249,7 +245,12 @@ const Navbar = () => {
             </a> */}
             </Stack>
 
-            <Stack direction="column">
+            <Stack
+              direction="column"
+              sx={{
+                display: { lg: "flex", md: "flex", sm: "none" },
+              }}
+            >
               <Typography
                 fontSize={16}
                 textTransform="uppercase"
@@ -274,7 +275,12 @@ const Navbar = () => {
               </span>
             </Stack>
 
-            <Stack direction="column">
+            <Stack
+              direction="column"
+              sx={{
+                display: { lg: "flex", md: "flex", sm: "none" },
+              }}
+            >
               <Typography
                 fontSize={16}
                 textTransform="uppercase"
@@ -298,7 +304,13 @@ const Navbar = () => {
               </span>
             </Stack>
 
-            <Stack direction="column" maxWidth="25%">
+            <Stack
+              direction="column"
+              sx={{
+                display: { lg: "flex", md: "flex", sm: "none" },
+              }}
+              maxWidth="25%"
+            >
               <Typography
                 fontSize={16}
                 fontWeight={600}

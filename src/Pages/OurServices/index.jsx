@@ -160,7 +160,7 @@ const index = () => {
         flexWrap="wrap"
         gap={2}
       >
-        {data.map((elem) => (
+        {data.map((elem, index) => (
           <Tilt
             options={{
               scale: 1,
@@ -219,6 +219,7 @@ const index = () => {
                     bgcolor: "#0D99FF",
                   },
                 }}
+                id={`ourServicesButton-${index + 1}`}
               >
                 <a
                   style={{

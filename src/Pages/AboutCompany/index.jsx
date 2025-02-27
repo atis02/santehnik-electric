@@ -15,7 +15,8 @@ const About = () => {
     <Box
       id="about"
       sx={{
-        height: { lg: "450px", md: "360px", sm: "300px", xs: "100%" },
+        height: { lg: "450px", md: "660px", sm: "600px", xs: "100%" },
+        // height: "100%",
         width: "100%",
         // backgroundImage: "url('/images/santehnik2.png')",
         // backgroundRepeat: "no-repeat",
@@ -32,7 +33,7 @@ const About = () => {
       pt={{ lg: 0, md: 0, sm: 0, xs: 5 }}
     >
       <Stack
-        height={{ lg: "470px", md: "360px", sm: "300px", xs: "140%" }}
+        height={{ lg: "470px", md: "560px", sm: "600px", xs: "140%" }}
         width="100%"
         position={"absolute"}
         zIndex={1}
@@ -56,7 +57,7 @@ const About = () => {
       >
         <Stack
           direction="column"
-          maxWidth={{ lg: "50%", md: "50%", sm: "80%", xs: "90%" }}
+          maxWidth={{ lg: "50%", md: "60%", sm: "80%", xs: "90%" }}
         >
           <Typography
             textAlign="center"
@@ -98,7 +99,7 @@ const About = () => {
           </Typography>
         </Stack>
         <Stack
-          height={{ lg: "460px", md: "360px", sm: "300px", xs: "360px" }}
+          height={{ lg: "460px", md: "560px", sm: "300px", xs: "360px" }}
           width={{ lg: "300px", md: "360px", sm: "300px", xs: "230px" }}
         >
           <img
