@@ -48,7 +48,7 @@ const Models = () => {
         { price: "900p", title: "Канализация " },
         { price: "900p", title: "Трубопровод ГВС, ХВС" },
       ],
-      pdfUrl: "/Сантехника.pdf",
+      pdfUrl: "/Сантехник.pdf",
     },
   ];
   const theme = useTheme();
